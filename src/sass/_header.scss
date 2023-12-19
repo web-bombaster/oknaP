@@ -1,0 +1,126 @@
+.header {
+}
+.header-top {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    background-color: #F7F7F7;
+    .container {
+
+        position: relative;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.header-top__menu {
+    display: flex;
+    gap: 30px;
+}
+.top-menu {
+}
+.top-menu__item {
+}
+.top-menu__link {
+    font-size: 14px;
+    transition: color .25s;
+
+    &:hover {
+        color: var(--color-accent);
+    }
+}
+.header-top__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 72px;
+    height: auto;
+}
+.top-logo {
+}
+.header-top__info {
+}
+.top-info {
+}
+.top-info__schedule {
+    position: relative;
+    padding-right: 16px;
+    color: #828282;
+    font-size: 13px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        
+        width: 1px;
+        height: 28px;
+        
+        transform: translateY(-50%);
+        
+        background-color: #E0E0E0;
+    }
+}
+.top-info__phone {
+    padding-left: 15px;
+    font-size: 16px;
+    color: #2E2D2E;
+    font-weight: 600;
+
+    transition: color .25s;
+
+    &:hover {
+        color: var(--color-accent);
+    }
+}
+.header-bottom {
+    min-height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-bottom: 1px solid #E0E0E0;
+
+    .container {
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-bottom__calc {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+.header-bottom__calc {
+}
+.header-bottom__logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    color: #77787A;
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.1;
+
+    img {
+        height: 48px;
+        width: auto;
+    }
+}
+.header-bottom__request {
+}

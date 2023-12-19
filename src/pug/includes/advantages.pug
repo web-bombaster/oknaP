@@ -1,0 +1,26 @@
+mixin item(icon, title, descr)
+	.advantages-v1__item.adv1-item
+		.adv1-item__box
+			.adv1-item__icon
+				img(src="img/icons/"+icon, alt="", loading="lazy")
+			span.adv1-item__title #{title}
+		p.adv1-item__descr #{descr}
+
+.advantages-v1.indent
+	.container 
+		.advantages-v1__box
+			+item(
+				'sale.svg',
+				'Низкие цены',
+				'За счет высоких объемов производства мы предлагаем самые низкие цены на окна из пластика в Москве.'
+			)
+			+item(
+				'protection.svg',
+				'40 лет службы',
+				'Качественный немецкий профиль Rehau при правильной эксплуатации и регулярном уходе прослужит более 40 лет!'
+			)
+			+item(
+				'guarantee.svg',
+				'5 лет гарантии',
+				'Мы уверены в качестве нашей продукции, поэтому предлагаем до пяти лет бесплатной гарантии на конструкции и монтаж.'
+			)

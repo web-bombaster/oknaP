@@ -1,0 +1,65 @@
+.btn {
+	padding: 12px 30px;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+
+	color: #fff;
+	font-size: 15px;
+	line-height: normal;
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+
+	background-color: var(--color-accent);
+	border: none;
+	border-radius: 3px;
+
+	transition: background-color 0.25s, color 0.25s, transform 0.25s;
+	cursor: pointer;
+
+	@media screen and (max-width: $break_sm) {
+		padding: 11px 60px;
+	}
+}
+
+.btn:hover:not(:disabled),
+.btn:focus {
+	transform: translateY(-2px);
+}
+
+.btn:disabled {
+	opacity: 0.4;
+}
+
+.btn__icon {
+	color: var(--color-text);
+	background-color: #fff;
+	border: 1px solid #e0e0e0;
+}
+
+.btn-arrow {
+	display: inline-block;
+
+	height: 48px;
+	width: 150px;
+
+	color: #fff;
+
+	background-color: #2c2c2c;
+	border: none;
+
+	background-image: url("../img/arrow-white.svg");
+	background-size: 45px 16px;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	cursor: pointer;
+
+	transition: 0.25s;
+
+	&:hover {
+		background-color: #ff7043;
+	}
+}

@@ -1,0 +1,44 @@
+.banner-fw.indent
+    .banner-bg
+        img.banner-bg__pc(src="img/banner-fw/pc.jpg", alt="")
+        img.banner-bg__mob(src="img/banner-fw/mob.jpg", alt="")
+    .container
+        
+        .banner-fw__text.banner-text
+            p.banner-text__title 
+                |идеальные окна<br> для московской зимы<br> 
+                span со скидкой 18%
+            
+            ul.banner-text__descr
+                li Гарантия на окна 5 лет
+                li Пожизненная гарантия на стеклопакет
+        
+        .banner-fw__box.banner-box
+            .banner-box__top
+                .banner-box__title
+                    span.label Акция со скидкой 18% <br>
+                    span.mobile Акция 
+                    | закончится ровно через
+
+                .timer
+                    .timer-col
+                        span.timer-col__number 27
+                        span.timer-col__text дней
+                    .timer-separator :
+                    .timer-col
+                        span.timer-col__number 12
+                        span.timer-col__text часов
+                    .timer-separator :
+                    .timer-col
+                        span.timer-col__number 00
+                        span.timer-col__text минут
+
+            .banner-box__text
+                span Успейте записаться <br> на замер
+                span
+                    img(src="img/icons/arrow-form-action.svg", alt="")
+
+            form.banner-form(action="#").form
+                input(type="text", name="name", placeholder="Имя").banner-form__input
+                input(type="tel", name="tel", placeholder="+7 (___) ___ - __ - __").banner-form__input
+                input(type="submit", value="Получить скидку").btn.banner-form__btn
