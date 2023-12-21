@@ -1,10 +1,13 @@
 section.systems-rehau.indent
     .container
         h2.section-header Профильные системы Rehau
-        ul.systems-rehau__slider
-            .systems-rehau__wrapper
-                a.systems-rehau__item.sr-item(href="#")
-                    img.sr-item__img(src="img/systems-rehau/01.png", alt="")
+
+        ul.systems-rehau__slider.swiper
+
+            .systems-rehau__wrapper.swiper-wrapper
+
+                a.systems-rehau__item.sr-item.swiper-slide(href="#")
+                    img.sr-item__img(src="img/systems-rehau/01.png", alt="", width=160, height=243)
                     h3.sr-item__title Blitz
                     span.sr-item__info Доступно каждому
                     p.sr-item__descr Rehau Blitz - обновленная версия базового профиля Рехау - недорогое и практичное решение для остекления квартир, балконов и дачных домов.
@@ -12,15 +15,83 @@ section.systems-rehau.indent
                         .property__item.property-item
                             span.property-item__title Свет
                             .property-item__chart
-                                .property-item__chart-value
+                                .property-item__chart-value(style = "width: 60%;")
                         .property__item.property-item
                             span.property-item__title Тепло
                             .property-item__chart
-                                .property-item__chart-value
+                                .property-item__chart-value(style = "width: 70%;")
                         .property__item.property-item
                             span.property-item__title Шум
                             .property-item__chart
-                                .property-item__chart-value
+                                .property-item__chart-value(style = "width: 70%;")
                     .sr-item__price
-                        span от
+                        span от 
                         | 6 828 ₽/м2
+
+                a.systems-rehau__item.sr-item.swiper-slide(href="#")
+                    img.sr-item__img(src="img/systems-rehau/02.png", alt="")
+                    h3.sr-item__title Delight
+                    span.sr-item__info Больше света
+                    p.sr-item__descr Профиль Rehau Delight пропускает на 10% больше света в сравнении с другими профильными системами.
+                    .property
+                        .property__item.property-item
+                            span.property-item__title Свет
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 90%;")
+                        .property__item.property-item
+                            span.property-item__title Тепло
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 80%;")
+                        .property__item.property-item
+                            span.property-item__title Шум
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 80%;")
+                    .sr-item__price
+                        span от 
+                        | 7 986 ₽/м2
+
+                a.systems-rehau__item.sr-item.swiper-slide(href="#")
+                    img.sr-item__img(src="img/systems-rehau/03.png", alt="")
+                    h3.sr-item__title Grazio
+                    span.sr-item__info Идеальный баланс
+                    p.sr-item__descr Rehau Grazio - изящная форма сочетается с превосходными показателями теплоизащиты. Профиль устойчив к перепадам температур и влажности.
+                    .property
+                        .property__item.property-item
+                            span.property-item__title Свет
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 85%;")
+                        .property__item.property-item
+                            span.property-item__title Тепло
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 80%;")
+                        .property__item.property-item
+                            span.property-item__title Шум
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 75%;")
+                    .sr-item__price
+                        span от 
+                        | 7 615 ₽/м2
+
+                a.systems-rehau__item.sr-item.swiper-slide(href="#")
+                    img.sr-item__img(src="img/systems-rehau/04.png", alt="")
+                    h3.sr-item__title Intelio 80
+                    span.sr-item__info Тишина и комфорт
+                    p.sr-item__descr Rehau Blitz - обновленная версия базового профиля Рехау - недорогое и практичное решение для остекления квартир, балконов и дачных домов.
+                    .property
+                        .property__item.property-item
+                            span.property-item__title Свет
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 70%;")
+                        .property__item.property-item
+                            span.property-item__title Тепло
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 80%;")
+                        .property__item.property-item
+                            span.property-item__title Шум
+                            .property-item__chart
+                                .property-item__chart-value(style = "width: 80%;")
+                    .sr-item__price
+                        span от 
+                        | 8 898 ₽/м2
+
+            .systems-rehau__pagination

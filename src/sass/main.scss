@@ -24,12 +24,13 @@
 @import "_banner-fw";
 @import "_form";
 @import "_advantages";
-@import "_pricesRehau";
+@import "_manufacturers-price";
 @import "_systemsRehau";
+@import "_prices-rehau";
 
 
 // Стили текущего проекта
 
 
 // Библиотеки и их кастомизация
-// @import "../libs/swiper-bundle.min";
+@import "../libs/swiper-bundle.min";

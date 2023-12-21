@@ -1,0 +1,135 @@
+.manufacturers-price {
+	position: relative;
+
+	padding: 15px;
+	background-image: url("../img/manufacturers-price/bg.jpg");
+	background-size: cover;
+	background-position: center;
+
+	overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    @media screen and (max-width: 480px) {
+        background-image: url("../img/manufacturers-price/bg-mob.jpg");
+    }
+
+	.section-header {
+		margin-bottom: 15px;
+	}
+
+	.btn {
+        @media screen and (max-width: 480px) {
+            min-width: initial;
+        }
+	}
+}
+.indent {
+}
+.container {
+}
+.manufacturers-price__box {
+	padding: 42px;
+	max-width: 468px;
+
+	border-radius: 3px;
+	background: rgba(255, 255, 255, 0.9);
+	backdrop-filter: blur(3px);
+
+    @media screen and (max-width: 480px) {
+        padding: 25px 15px;
+    }
+}
+.manufacturers-price__descr {
+	margin-bottom: 34px;
+	line-height: 1.35;
+
+	font-size: 16px;
+
+    @media screen and (max-width: 992px) {
+        margin-bottom: 22px;
+    }
+
+	@media screen and (max-width: 768px) {
+		font-size: 14px;
+	}
+}
+.manufacturers-price__value-pc {
+	padding: 17px 10px;
+	margin: 0;
+
+	position: absolute;
+	left: 62%;
+    top: 27%;
+
+    transform: translateY(-50%);
+
+	width: 210px;
+
+	font-size: 16px;
+	font-weight: 600;
+	line-height: normal;
+	text-align: center;
+
+	background-color: #fff;
+	border-radius: 3px;
+
+    box-shadow: 0px 4px 4px 0px rgba(69, 69, 69, 0.25);
+
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+
+	span {
+		font-size: 24px;
+	}
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -37px;
+        top: 50%;
+        
+        width: 37px;
+        height: 1px;
+        
+        transform: translateY(-50%);
+        
+        background-color: #fff;
+        box-shadow: 0px 4px 4px 0px rgba(69, 69, 69, 0.25);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -44px;
+        top: 50%;
+        
+        width: 13px;
+        height: 13px;
+        
+        transform: translateY(-50%);
+        
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 4px 4px 0px rgba(69, 69, 69, 0.25);
+    }
+}
+.manufacturers-price__value-mob {
+    display: none;
+    font-size: 16px;
+	font-weight: 600;
+	line-height: normal;
+
+    span {
+		font-size: 20px;
+	}
+
+    @media screen and (max-width: 992px) {
+        display: block;
+        margin-bottom: 25px;
+    }
+}

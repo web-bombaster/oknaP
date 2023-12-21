@@ -2,27 +2,36 @@
 // https://swiperjs.com/
 
 function initSwiper() {
+	if (document.querySelector(".pr-slider")) {
+		let menu = ["Blitz", "Grazio", "Delight", "Intelio"];
 
-	if (document.querySelector('.jsHeroSlider')) {
-		const prodSliderInner = new Swiper('.jsHeroSlider', {
+		const prodSliderInner = new Swiper(".pr-slider", {
 			spaceBetween: 20,
 			slidesPerView: 1,
-			loop: true,
 			pagination: {
-				el: ".hero-slider__pagination",
-			},
-			navigation: {
-				nextEl: ".hero-slider__next",
-				prevEl: ".hero-slider__prev",
+				el: ".pr-btns",
+				clickable: true,
+				bulletClass: "pr-btns__item",
+				renderBullet: function (index, className) {
+					return (
+						'<span class="' +
+						className +
+						'">' +
+						menu[index] +
+						"</span>"
+					);
+				},
 			},
 		});
 	};
 
-	if (document.querySelector('.jsProductsListSlider')) {
-		const prodSliderInner = new Swiper('.jsProductsListSlider', {
-			spaceBetween: 10,
+	if (document.querySelector(".systems-rehau__slider")) {
+		const prodSliderInner = new Swiper(".systems-rehau__slider", {
+			spaceBetween: 20,
 			slidesPerView: 1,
 			loop: true,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
 			breakpoints: {
 				500: {
 					slidesPerView: 2,
@@ -40,45 +49,44 @@ function initSwiper() {
 					loop: true,
 				},
 			},
-			navigation: {
-				nextEl: ".products-list__next",
-				prevEl: ".products-list__prev",
+			pagination: {
+				el: ".systems-rehau__pagination",
 			},
 		});
-	};
+	}
 
-	if (document.querySelector('.jsBrandsList')) {
-		const brandsList = new Swiper('.jsBrandsList', {
-			// slidesPerView: 5,
-			loop: true,
-			spaceBetween: 20,
-			autoplay: {
-				delay: 2500,
-			},
-			navigation: {
-				nextEl: '.brands__button-next',
-				prevEl: '.brands__button-prev',
-			},
+	// if (document.querySelector('.jsBrandsList')) {
+	// 	const brandsList = new Swiper('.jsBrandsList', {
+	// 		// slidesPerView: 5,
+	// 		loop: true,
+	// 		spaceBetween: 20,
+	// 		autoplay: {
+	// 			delay: 2500,
+	// 		},
+	// 		navigation: {
+	// 			nextEl: '.brands__button-next',
+	// 			prevEl: '.brands__button-prev',
+	// 		},
 
-			breakpoints: {
-				319: {
-					slidesPerView: 2,
-				},
+	// 		breakpoints: {
+	// 			319: {
+	// 				slidesPerView: 2,
+	// 			},
 
-				767: {
-					slidesPerView: 3,
-				},
+	// 			767: {
+	// 				slidesPerView: 3,
+	// 			},
 
-				991: {
-					slidesPerView: 4,
-				},
-				1199: {
-					slidesPerView: 5,
-				},
-			},
-		});
-	};
-};
+	// 			991: {
+	// 				slidesPerView: 4,
+	// 			},
+	// 			1199: {
+	// 				slidesPerView: 5,
+	// 			},
+	// 		},
+	// 	});
+	// };
+}
 
 // window.addEventListener("resize", initSwiper);
 window.addEventListener("resize", function () {
@@ -88,5 +96,3 @@ window.addEventListener("resize", function () {
 });
 
 initSwiper();
-
-

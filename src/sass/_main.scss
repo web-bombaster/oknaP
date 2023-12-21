@@ -248,8 +248,12 @@ h3:not([class]) {
 	cursor: auto;
 }
 
+.swiper-pagination-bullets {
+	margin-top: 15px;
+}
+
 .swiper-pagination-bullet-active {
-	background-color: var(--color-main) !important;
+	background-color: var(--color-accent) !important;
 }
 
 // Страница показа верстки

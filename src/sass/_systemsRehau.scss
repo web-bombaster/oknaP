@@ -1,34 +1,153 @@
-.systems-rehau {}
-.systems-rehau__slider {}
-.systems-rehau__wrapper {}
+.systems-rehau {
+    .systems-rehau__wrapper {
+        overflow-x: initial;       
+    }
+}
+.systems-rehau__slider {
+    .sr-item {
+        display: flex;
+        height: initial;
+    }
+}
+.systems-rehau__wrapper {
+    margin-top: 80px;
+    padding-bottom: 15px;
+}
 .systems-rehau__item {
 }
 .sr-item {
+    width: 100%;
     padding: 0 20px 40px;
-    display: block;
+    display: flex;
+    flex-direction: column;
 
     background-color: #F5F7F8;
     border-radius: 3px;
+    box-sizing: border-box;
+
+    transition: box-shadow .25s;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 20px 27px;
+    }
+
+    // &:hover {
+    //     box-shadow: 0px 0px 14px #dbdcdd;
+    // }
 }
 .sr-item__img {
+    display: block;
+    margin-bottom: 25px;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    height: auto;
+
+    @media screen and (max-width: 768px) {
+        width: 90px;
+        margin-top: -40px;
+        margin-bottom: 10px;
+    }
 }
 .sr-item__title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+    }
 }
 .sr-item__info {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #828282;
 }
 .sr-item__descr {
+    margin: 0 0 17px;
+    font-size: 14px;
+    flex-grow: 1;
+    line-height: 1.35;
+
+    @media screen and (max-width: 768px) {
+        font-size: 13px;
+    }
 }
 .property {
+    margin: 0 0 26px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+
+    @media screen and (max-width: 768px) {
+        margin: 0 0 22px;
+    }
 }
 .property__item {
 }
 .property-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &:nth-child(1) {
+        .property-item__chart-value {
+            background-color: #F3D260;
+        }
+    }
+
+    &:nth-child(2) {
+        .property-item__chart-value {
+            background-color: #B8005D;
+        }
+    }
 }
 .property-item__title {
+    color: #828282;
+    font-size: 13px;
+    line-height: 1.35;
+
+    min-width: 40px;
 }
 .property-item__chart {
+    position: relative;
+    height: 6px;
+    width: 100%;
+    background-color: #D6DADC;
+    border-radius: 3px;
+    overflow: hidden;
+
+
 }
 .property-item__chart-value {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: #282626;
+    border-radius: 3px;
 }
 .sr-item__price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+    }
+    
+    span {
+        font-size: 14px;
+    }
+}
+.systems-rehau__pagination {
+    text-align: center;
 }
