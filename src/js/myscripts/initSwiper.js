@@ -1,6 +1,7 @@
 // Инициализация слайдера swiper
 // https://swiperjs.com/
 
+// Кнопки-табы для блока "Окна Rehau по цене производителя"
 function initSwiper() {
 	if (document.querySelector(".pr-slider")) {
 		let menu = ["Blitz", "Grazio", "Delight", "Intelio"];
@@ -23,8 +24,45 @@ function initSwiper() {
 				},
 			},
 		});
-	};
+	}
 
+	// Окна Rehau по цене производителя - вложенный слайдер
+	if (document.querySelector(".slider-windows")) {
+		const prodSliderInner = new Swiper(".slider-windows", {
+			spaceBetween: 20,
+			slidesPerView: 1,
+			loop: true,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+			breakpoints: {
+				500: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+					loop: true,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+					loop: true,
+				},
+				1001: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+					loop: true,
+				},
+			},
+			pagination: {
+				el: ".slider-windows__pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".slider-windows__next",
+				prevEl: ".slider-windows__prev",
+			},
+		});
+	}
+
+	// Профильные системы Rehau
 	if (document.querySelector(".systems-rehau__slider")) {
 		const prodSliderInner = new Swiper(".systems-rehau__slider", {
 			spaceBetween: 20,
@@ -43,49 +81,22 @@ function initSwiper() {
 					spaceBetween: 20,
 					loop: true,
 				},
-				1401: {
+				1001: {
 					slidesPerView: 4,
 					spaceBetween: 20,
 					loop: true,
 				},
 			},
+			navigation: {
+				nextEl: ".systems-rehau__next",
+				prevEl: ".systems-rehau__prev",
+			},
 			pagination: {
 				el: ".systems-rehau__pagination",
+				clickable: true,
 			},
 		});
 	}
-
-	// if (document.querySelector('.jsBrandsList')) {
-	// 	const brandsList = new Swiper('.jsBrandsList', {
-	// 		// slidesPerView: 5,
-	// 		loop: true,
-	// 		spaceBetween: 20,
-	// 		autoplay: {
-	// 			delay: 2500,
-	// 		},
-	// 		navigation: {
-	// 			nextEl: '.brands__button-next',
-	// 			prevEl: '.brands__button-prev',
-	// 		},
-
-	// 		breakpoints: {
-	// 			319: {
-	// 				slidesPerView: 2,
-	// 			},
-
-	// 			767: {
-	// 				slidesPerView: 3,
-	// 			},
-
-	// 			991: {
-	// 				slidesPerView: 4,
-	// 			},
-	// 			1199: {
-	// 				slidesPerView: 5,
-	// 			},
-	// 		},
-	// 	});
-	// };
 }
 
 // window.addEventListener("resize", initSwiper);

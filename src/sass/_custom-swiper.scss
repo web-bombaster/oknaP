@@ -1,0 +1,63 @@
+.swiper-button-prev,
+.swiper-button-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%) rotate(180deg);
+
+	height: 4.5rem;
+	width: 4.5rem;
+
+	font-size: 0;
+
+	border-radius: 50%;
+	background-color: rgba(254, 254, 254, 0.8);
+
+	background-image: url("../img/icons/arrow-slider.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	box-shadow: 0 0 3px 0 #b3b3b3;
+
+	z-index: 1;
+	cursor: pointer;
+
+	&::after {
+		display: none;
+	}
+
+	@media screen and (max-width: $break_sm) {
+		height: 3.2rem;
+		width: 3.2rem;
+	}
+}
+
+.swiper-button-prev {
+	left: calc(-4.5rem - 1.5rem);
+	transform: translateY(-50%);
+
+
+	@media screen and (max-width: 120rem) {
+		left: 5px;
+	}
+}
+
+.swiper-button-next {
+	right: calc(-4.5rem - 1.5rem);
+
+	@media screen and (max-width: 120rem) {
+		right: 5px;
+	}
+}
+
+.swiper-button-disabled {
+	opacity: 0.5;
+	cursor: auto;
+}
+
+.swiper-pagination-bullets {
+	margin-top: 15px;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: var(--color-accent) !important;
+}
