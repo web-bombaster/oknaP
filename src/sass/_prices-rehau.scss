@@ -3,10 +3,15 @@
 	gap: 10px;
 
 	margin-bottom: 32px;
+
+	&.swiper-pagination-bullets {
+		margin-top: 0;
+	}
 }
 .swiper-pagination-clickable {
 }
 .swiper-pagination-bullets {
+
 }
 .swiper-pagination-horizontal {
 }

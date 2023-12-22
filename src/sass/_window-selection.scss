@@ -1,0 +1,79 @@
+.window-selection {
+    .container {
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        color: #fff;
+        background-color: #5b544c;
+        background-image: url('../img/window-selection/bg-pc.jpg');
+        background-size: cover;
+        background-position: center;
+
+        border-radius: 3px;
+        overflow: hidden;
+
+        @media screen and (max-width: 768px) {
+            padding-top: 44px;
+            padding-bottom: 44px;
+
+            background-image: url('../img/window-selection/bg-pc.jpg');
+        }
+
+        @media screen and (max-width: 480px) {
+            background-image: url('../img/window-selection/bg-mob.jpg');
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        max-width: 850px;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            max-width: 340px;
+
+            input {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .banner-form__input {
+    }
+    .btn {
+    }
+    .banner-form__btn {
+    }
+}
+.indent {
+}
+.window-selection__box {
+    margin-bottom: 60px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    max-width: 468px;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: 25px;
+        max-width: 340px;
+    }
+}
+.window-selection__title {
+    margin: 0;
+}
+.section-header {
+}
+.window-selection__descr {
+    margin: 0;
+
+    max-width: 350px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+}

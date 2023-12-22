@@ -32,7 +32,8 @@
 }
 
 .swiper-button-prev {
-	left: calc(-4.5rem - 1.5rem);
+	// left: calc(-4.5rem - 1.5rem);
+	left: 5px;
 	transform: translateY(-50%);
 
 
@@ -42,7 +43,8 @@
 }
 
 .swiper-button-next {
-	right: calc(-4.5rem - 1.5rem);
+	// right: calc(-4.5rem - 1.5rem);
+	right: 5px;
 
 	@media screen and (max-width: 120rem) {
 		right: 5px;

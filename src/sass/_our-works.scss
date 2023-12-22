@@ -1,0 +1,135 @@
+.our-works {
+	.container {
+		display: flex;
+		gap: 20px;
+
+        @media screen and (max-width: 1320px) {
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 480px) {
+            gap: 10px;
+        }
+	}
+
+    .btn {
+        @media screen and (max-width: 1320px) {
+            display: none;
+        }
+    }
+}
+.indent {
+}
+.our-works__info {
+	padding: 44px 62px;
+
+	background-color: #f5f7f8;
+	border-radius: 3px;
+
+	@media screen and (max-width: 1320px) {
+        padding: 0;
+
+		// padding: 44px 20px;
+        background-color: #fff;
+	}
+}
+.ow-info__title {
+	margin-bottom: 42px;
+
+    @media screen and (max-width: 1320px) {
+        margin-bottom: 15px;
+    }
+}
+.section-header {
+}
+.ow-info__box {
+	margin-bottom: 42px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+
+    @media screen and (max-width: 1320px) {
+        padding: 30px 20px;
+        margin-bottom: 0;
+
+        background-color: #f5f7f8;
+        border-radius: 3px;
+
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 27px 20px;
+    }
+
+    @media screen and (max-width: 800px) {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+
+    @media screen and (max-width: 420px) {
+        grid-template-columns: auto;
+        gap: 20px;        
+    }
+}
+.ow-info__item {
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+
+
+	.title {
+		font-size: 28px;
+		font-weight: 600;
+		line-height: normal;
+
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
+	}
+	.accent {
+		color: var(--color-accent);
+	}
+	.dark {
+		color: var(--color-text);
+	}
+}
+.descr {
+	font-size: 14px;
+	color: #4f4f4f;
+	line-height: normal;
+}
+.our-works__slider {
+}
+.ow-slider {
+    width: 100%;
+}
+.ow-slider__wrapper {
+}
+.ow-slider__item {
+	&.swiper-slide {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 5px;
+
+		img {
+			display: block;
+			width: calc(50% - 5px);
+			height: auto;
+
+            border-radius: 3px;
+            overflow: hidden;
+		}
+	}
+}
+.our-works__pagination {
+    display: none;
+
+    text-align: center;
+
+    @media screen and (max-width: 1320px) {
+        display: block;
+    }
+}

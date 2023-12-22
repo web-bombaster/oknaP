@@ -1,0 +1,42 @@
+.window-delivery {
+    
+    .container {
+        padding: 56px 80px;
+
+        background-color: #f3f4f6;
+        background-image: url('../img/window-delivery/bg-pc.jpg');
+        background-size: cover;
+
+
+        @media screen and (max-width: 600px) {
+            padding-bottom: 60%;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            background-image: url('../img/window-delivery/bg-mob.jpg');
+            background-position: bottom right;
+        }
+
+        @media screen and (max-width: 480px) {
+            padding-bottom: 80%;
+            background-position: bottom left;
+        }
+    }
+}
+.window-delivery__box {
+    max-width: 470px;
+}
+.window-delivery__title {
+    margin-bottom: 20px;
+    max-width: 380px;
+
+}
+.section-header {
+}
+.window-delivery__descr {
+    margin-bottom: 30px;
+}
+.window-delivery__btn {
+}
+.btn {
+}

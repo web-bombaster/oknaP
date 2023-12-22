@@ -3,6 +3,26 @@
 
 // Кнопки-табы для блока "Окна Rehau по цене производителя"
 function initSwiper() {
+	
+	if (document.querySelector(".our-works__slider")) {
+
+		const prodSliderInner = new Swiper(".our-works__slider", {
+			spaceBetween: 20,
+			slidesPerView: 1,
+			loop: true,
+
+			pagination: {
+				el: ".our-works__pagination",
+				clickable: true,
+			},
+
+			navigation: {
+				nextEl: ".our-works__next",
+				prevEl: ".our-works__prev",
+			},
+		});
+	};
+
 	if (document.querySelector(".pr-slider")) {
 		let menu = ["Blitz", "Grazio", "Delight", "Intelio"];
 
@@ -24,7 +44,7 @@ function initSwiper() {
 				},
 			},
 		});
-	}
+	};
 
 	// Окна Rehau по цене производителя - вложенный слайдер
 	if (document.querySelector(".slider-windows")) {
