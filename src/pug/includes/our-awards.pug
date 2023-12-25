@@ -1,0 +1,34 @@
+mixin ourAwardsItem(icon, descr)
+    li.our-awards__item.oa-item
+        img.oa-item__icon(src="img/our-awards/"+icon, alt="", loading="lazy")
+        span.oa-item__descr #{descr} 
+
+
+section.our-awards
+    .container
+        h2.our-awards__title.section-header Наши награды
+        ul.our-awards__box
+            +ourAwardsItem(
+                '01.png',
+                'Награда «За вклад в реализацию энергосберегающей продукции».'
+            )
+            +ourAwardsItem(
+                '02.png',
+                'Свидетельство официального партнера компании REHAU.'
+            )
+            +ourAwardsItem(
+                '03.png',
+                'Лауреат конкурса «Всероссийская Марка (III тысячелетие)».'
+            )
+            +ourAwardsItem(
+                '04.png',
+                'Звание «Народная марка» в номинации «Пластиковые окна» за 2012 год.'
+            )
+            +ourAwardsItem(
+                '05.png',
+                'Победитель премии «Золотое окно-2014» проводимой порталом «Окна Медиа».'
+            )
+            +ourAwardsItem(
+                '06.png',
+                'Награда международного конкурса «Экологически безопасная продукция».'
+            )

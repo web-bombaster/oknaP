@@ -1,0 +1,47 @@
+.quality-guarantee {
+	.container {
+		padding: 76px 87px;
+		color: #fff;
+
+		background-image: url("../img/quality-guarantee/bg-pc.jpg");
+		background-size: cover;
+		background-position: center;
+
+		border-radius: 3px;
+		overflow: hidden;
+
+		@media screen and (max-width: 992px) {
+			padding: 76px 1.5rem;
+		}
+
+        @media screen and (max-width: 480px) {
+            padding: 35px 25px 95px;
+		background-image: url("../img/quality-guarantee/bg-mob.jpg");
+            
+        }
+	}
+}
+.indent {
+}
+.quality-guarantee__box {
+}
+.quality-guarantee__title {
+	margin-bottom: 15px;
+	max-width: 365px;
+
+    @media screen and (max-width: 480px) {
+	max-width: 255px;
+        
+    }
+}
+.section-header {
+}
+.quality-guarantee__descr {
+	margin-top: 0;
+	margin-bottom: 45px;
+	max-width: 462px;
+}
+.quality-guarantee__btn {
+}
+.btn {
+}

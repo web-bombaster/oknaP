@@ -3,9 +3,7 @@
 
 // Кнопки-табы для блока "Окна Rehau по цене производителя"
 function initSwiper() {
-	
 	if (document.querySelector(".our-works__slider")) {
-
 		const prodSliderInner = new Swiper(".our-works__slider", {
 			spaceBetween: 20,
 			slidesPerView: 1,
@@ -80,7 +78,7 @@ function initSwiper() {
 				prevEl: ".slider-windows__prev",
 			},
 		});
-	}
+	};
 
 	// Профильные системы Rehau
 	if (document.querySelector(".systems-rehau__slider")) {
@@ -116,8 +114,34 @@ function initSwiper() {
 				clickable: true,
 			},
 		});
-	}
-}
+	};
+
+	// Окна Rehau по цене производителя - вложенный слайдер
+	if (document.querySelector(".customer-reviews__slider")) {
+		const customerReviewsSlider = new Swiper(".customer-reviews__slider", {
+			spaceBetween: 10,
+			slidesPerView: 1,
+			loop: true,
+			// disableOnInteraction: false,
+			// pauseOnMouseEnter: true,
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					loop: true,
+				}
+			},
+			pagination: {
+				el: ".customer-reviews__pagination",
+				clickable: true,
+			},
+			navigation: {
+				nextEl: ".customer-reviews__next",
+				prevEl: ".customer-reviews__prev",
+			},
+		});
+	};
+};
 
 // window.addEventListener("resize", initSwiper);
 window.addEventListener("resize", function () {

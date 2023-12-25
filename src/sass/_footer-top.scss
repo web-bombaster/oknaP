@@ -1,0 +1,116 @@
+.footer-top {
+	padding-top: 68px;
+	padding-bottom: 68px;
+	background-color: #f5f7f8;
+
+    @media screen and (max-width: 850px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+.container {
+}
+.footer-top__box {
+	display: flex;
+	justify-content: space-between;
+    gap: 20px;
+
+    @media screen and (max-width: 992px) {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 40px 20px;
+    }
+
+    @media screen and (max-width: 580px) {
+        gap: 16px;
+    }
+}
+.footer-top__col {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    transition: gap .25s;
+
+    &.toggle {
+        @media screen and (max-width: 580px) {
+            gap: 11px;
+        }
+
+        .footer-menu {
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        width: calc(100% / 3 - 20px * 2 / 3);
+    }
+
+    @media screen and (max-width: 580px) {
+        width: 100%;
+        position: relative;
+        font-size: 14px;
+
+        gap: 0;
+    }
+}
+.footer-top__title {
+	color: var(--color-accent);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 135%;
+
+    @media screen and (max-width: 580px) {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            
+            width: 24px;
+            height: 24px;
+            
+            transform: translateY(-50%);
+            
+            background-image: url('../img/icons/arrow-down.svg');
+            background-size: cover;
+        }
+    }
+
+    &.toggle {
+        &::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+}
+.footer-top__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.footer-menu {
+    @media screen and (max-width: 580px) {
+        display: none;
+    }
+
+    // &.toggle {
+    //     display: flex;
+    // }
+}
+.footer-menu__item {
+}
+.footer-menu__link {
+    position: relative;
+    display: inline-flex;
+    line-height: 1.35;
+    font-size: 14px;
+
+    transition: color .25s, transform .25s;
+
+    &:hover {
+        color: var(--color-accent);
+        transform: translateY(-1px);
+    }
+}
