@@ -1,10 +1,18 @@
 .header {
+    @media screen and (max-width: 1024px) {
+        background-color: var(--color-accent);
+    }
 }
+
 .header-top {
     padding-top: 8px;
     padding-bottom: 8px;
 
     background-color: #F7F7F7;
+
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
     .container {
 
         position: relative;
@@ -25,6 +33,10 @@
 .top-menu__link {
     font-size: 14px;
     transition: color .25s;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 12px;
+    }
 
     &:hover {
         color: var(--color-accent);
@@ -85,14 +97,24 @@
 
     border-bottom: 1px solid #E0E0E0;
 
+    @media screen and (max-width: 1024px) {
+        min-height: initial;
+    }
+
     .container {
         position: relative;
         padding-top: 10px;
         padding-bottom: 10px;
-    
+
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (max-width: 1024px) {
+            padding-top: 4px;
+            padding-bottom: 4px;
+
+        }
     }
 
     .header-bottom__calc {
@@ -101,6 +123,9 @@
     }
 }
 .header-bottom__calc {
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 }
 .header-bottom__logo {
     position: absolute;
@@ -117,10 +142,47 @@
     text-align: center;
     line-height: 1.1;
 
-    img {
+    @media screen and (max-width: 1024px) {
+        position: relative;
+        left: initial;
+        transform: none;
+
+        align-items: flex-start;
+        text-align: left;
+        gap: 4px;
+
+        color: #fff;
+    }
+
+    .logo-pc {
         height: 48px;
         width: auto;
+
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    .logo-mob {
+        display: none;
+
+        @media screen and (max-width: 1024px) {
+            display: block;
+        }
+    }
+
+    span {
+        display: none;
+
+        @media screen and (max-width: 1024px) {
+            display: inline-flex;
+            font-weight: 900;
+            font-size: 32px;
+        }
     }
 }
 .header-bottom__request {
+    @media screen and (max-width: 1024px) {
+        display: none;
+    }
 }

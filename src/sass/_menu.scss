@@ -3,6 +3,10 @@
 	padding-bottom: 19px;
 	border-bottom: 1px solid #e0e0e0;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+	@media screen and (max-width: 1024px) {
+		display: none;
+	}
 }
 .container {
 }
@@ -44,6 +48,10 @@
 
 	font-size: 16px;
 	font-weight: 500;
+
+	@media screen and (max-width: 1200px) {
+		font-size: 14px;
+	}
 }
 
 .nav-menu__submenu {
