@@ -1,10 +1,10 @@
 const headerFixed = () => {
-    if (document.documentElement.clientWidth <= 992) {
+    if (document.documentElement.clientWidth <= 1024) {
         const heightHeader = document.querySelector('.header').offsetHeight; // высота хедера
         document.body.style.paddingTop = heightHeader + 'px';
     } else {
         document.body.style.paddingTop = 0;
-    }
+    };
 };
 
 headerFixed();

@@ -1,0 +1,37 @@
+mixin paymentListItem(img)
+    li.payment-list__item
+        img.payment-list__icon(src="img/payment/"+img, alt="")
+
+
+
+footer.footer
+    .container
+        .footer__col.text
+            p © 2023. ООО «ОКНА Р» – изготовление, установка ипродажа пластиковых окон и дверей REHAU в Москве и Московской области.Адрес: г. Москва Шоссе энтузиастов, 7а
+            p ИНН: 7713777498
+            p ОГРН: 1137746920200
+            p.not-offer Информация на сайте носит информационный характер и не является публичной офертой
+
+        .footer__col.payment
+            p Принимаем к оплате:
+
+            ul.payment-list
+                +paymentListItem('01.svg')
+                +paymentListItem('02.svg')
+                +paymentListItem('03.svg')
+                +paymentListItem('04.svg')
+                +paymentListItem('05.svg')
+                +paymentListItem('06.svg')
+                +paymentListItem('07.png')
+                +paymentListItem('08.png')
+                +paymentListItem('09.png')
+                +paymentListItem('10.svg')
+                +paymentListItem('11.svg')
+                +paymentListItem('12.svg')
+
+        .footer__col.contacts
+            a.footer-contacts__phone(href="tel:+74951531205") +7 (495) 153-12-05
+            p.footer-contacts__time 7 дней в неделю 9:00 – 21:00
+            a.footer-contacts__mail(href="mailto:zakaz@oknap.ru") zakaz@oknap.ru
+            a.footer-contacts__btn.btn(href="#") Обратный звонок
+        .footer__bottom

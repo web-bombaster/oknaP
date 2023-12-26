@@ -33,6 +33,22 @@
 			}
 		}
 	}
+
+	.mobile-menu & {
+		flex-direction: column;
+		gap: 0;
+
+		width: 100%;
+
+		.nav-menu__link {
+			display: block;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px dotted #e67068;
+		}
+	}
+
+	
 }
 .nav-menu__item {
 	position: relative;
@@ -51,6 +67,11 @@
 
 	@media screen and (max-width: 1200px) {
 		font-size: 14px;
+	}
+
+	@media screen and (max-width: 1024px) {
+		font-size: 16px;
+		font-weight: 400;
 	}
 }
 

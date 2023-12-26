@@ -1,53 +1,55 @@
-if (document.querySelector('.jsMobileMenuBtnToggle')) {
+function mobileMenu() {
+	if (document.querySelector(".jsMobileMenuBtnToggle")) {
+		const menuBtn = document.querySelector(".jsMobileMenuBtnToggle");
+		const body = document.querySelector("body");
+		const menu = document.querySelector(".mobile-menu");
 
-    const menuBtn = document.querySelector('.jsMobileMenuBtnToggle');
-    // console.log(menuBtn);
+		function mobileMenuOpen() {
+			menu.classList.add("toggle");
+			body.classList.add("toggle");
+			menuBtn.classList.add("toggle");
+		}
 
-    // Показать / скрыть мобильное меню
-    function menuToggle() {
-        const body = document.querySelector('body');
-        const menu = document.querySelector('.mobile-menu');
+		function mobileMenuClose() {
+			menu.classList.remove("toggle");
+			body.classList.remove("toggle");
+			menuBtn.classList.remove("toggle");
+		}
 
-        if (!menuBtn.classList.contains('toggle')) {
-            menu.classList.add('toggle');
-            body.classList.add('toggle');
-        } else {
-            menu.classList.remove('toggle');
-            body.classList.remove('toggle');
-        }
+		// Показать / скрыть мобильное меню
+		function menuToggle() {
+			if (!menuBtn.classList.contains("toggle")) {
+				mobileMenuOpen();
+			} else {
+				mobileMenuClose();
+			}
+		}
 
-        window.addEventListener('resize', function () {
-            menuBtn.classList.remove('toggle');
-            menu.classList.remove('toggle');
-            body.classList.remove('toggle');
-        }, true);
+		menuBtn.addEventListener("click", menuToggle);
 
-        // heightMenuOverlay(); // меняем высоту оверлея меню при ресайзе
-    }
+		window.addEventListener(
+			"resize",
+			function () {
+				mobileMenuClose();
+			},
+			true
+		);
 
-    menuBtn.addEventListener("click", menuToggle);
+		// Закрываем мобильное меню по клику вне его
+		function closeMobileMenu() {
+			document.addEventListener("click", function (e) {
+				const target = e.target;
+				const its_menu = target == menu || menu.contains(target);
+				const its_btnMenu = target == menuBtn || menuBtn.contains;
 
-    // Закрываем мобильное меню по клику вне его
-    function closeMobileMenu() {
-        const btnMenu = document.querySelector('.jsMobileMenuBtnToggle');
-        const body = document.querySelector('body');
-        const menu = document.querySelector('.mobile-menu');
+				if (!its_menu && !its_btnMenu) {
+					mobileMenuClose();
+				}
+			});
+		}
 
-        document.addEventListener("click", function (e) {
-            const target = e.target;
-            const its_menu = target == menu || menu.contains(target);
-            const its_btnMenu = target == btnMenu;
+		closeMobileMenu();
+	}
+}
 
-            if (!its_menu && !its_btnMenu) {
-                menuBtn.classList.remove('toggle');
-                menu.classList.remove('toggle');
-                body.classList.remove('toggle');
-            }
-        });
-    };
-
-    closeMobileMenu();
-
-};
-
-
+mobileMenu();

@@ -1,5 +1,11 @@
 .header {
     @media screen and (max-width: 1024px) {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        // left: 0;
+        // right: 0;
+        z-index: 999;
         background-color: var(--color-accent);
     }
 }
@@ -111,8 +117,8 @@
         align-items: center;
 
         @media screen and (max-width: 1024px) {
-            padding-top: 4px;
-            padding-bottom: 4px;
+            padding-top: 8px;
+            padding-bottom: 8px;
 
         }
     }
@@ -184,5 +190,42 @@
 .header-bottom__request {
     @media screen and (max-width: 1024px) {
         display: none;
+    }
+}
+
+.header-bottom__btns {
+}
+.hb-btns {
+    display: none;
+    // display: flex;
+    gap: 28px;
+
+    @media screen and (max-width: 1024px) {
+        display: flex;
+    }
+
+    @media screen and (max-width: 400px) {
+        gap: 6px;
+    }
+}
+.hb-btns__item {
+    padding: 4px;
+    // background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 12px;
+    color: #fff;
+
+    &.toggle {
+        background-color: #fff;
+        color: var(--color-accent);
+    }
+
+    svg {
+        height: 22px;
+        width: auto;
     }
 }
