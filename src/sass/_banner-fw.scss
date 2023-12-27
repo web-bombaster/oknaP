@@ -91,8 +91,22 @@
         font-size: 30px;
     }
 
+	@media screen and (max-width: 480px) {
+		br {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 390px) {
+		font-size: 28px;
+	}
+
 	span {
 		color: var(--color-accent);
+
+		@media screen and (max-width: 480px) {
+			display: block;
+		}
 	}
 }
 .banner-text__descr {

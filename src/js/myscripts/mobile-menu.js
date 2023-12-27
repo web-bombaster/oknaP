@@ -1,3 +1,4 @@
+// Показать / скрыть мобильное меню
 function mobileMenu() {
 	if (document.querySelector(".jsMobileMenuBtnToggle")) {
 		const menuBtn = document.querySelector(".jsMobileMenuBtnToggle");
@@ -40,8 +41,8 @@ function mobileMenu() {
 			document.addEventListener("click", function (e) {
 				const target = e.target;
 				const its_menu = target == menu || menu.contains(target);
-				const its_btnMenu = target == menuBtn || menuBtn.contains;
-
+				const its_btnMenu = target == menuBtn || menuBtn.contains(target);
+				
 				if (!its_menu && !its_btnMenu) {
 					mobileMenuClose();
 				}
