@@ -3,7 +3,7 @@
 include ../includes/mixins
 
 //- Для pageType указать тип страницы
-- var pageType = 'home';
+- var pageType = 'plastikovyeOkna';
 
 
 //- home - главная страница
@@ -14,3 +14,6 @@ if pageType === 'home'
 if pageType === 'index'
 	include verstka
 
+//- plastikovye-okna - для показа верстки
+if pageType === 'plastikovyeOkna'
+	include plastikovye-okna

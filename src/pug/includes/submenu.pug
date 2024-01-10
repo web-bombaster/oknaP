@@ -1,0 +1,25 @@
+mixin submenuListItem(title)
+    li.submenu-list__item
+        a.submenu-list__link(href="#") #{title}
+
+mixin submenuListItemActive(title)
+    li.submenu-list__item.submenu-list__item--active
+        span #{title}
+
+.submenu
+    .container
+        ul.submenu-list
+            +submenuListItemActive('Калькулятор')
+            +submenuListItem('Окна под ключ с установкой')
+            +submenuListItem('Ламинированные')
+            +submenuListItem('Нестандартные')
+            +submenuListItem('Одностворчатые')
+            +submenuListItem('Двухстворчатые')
+            +submenuListItem('Трехстворчатые')
+            +submenuListItem('Стеклопакеты Rehau')
+            +submenuListItem('Двухкамерный стеклопакет')
+            +submenuListItem('Аксессуары')
+            +submenuListItem('Установка окон')
+            +submenuListItem('Цветные пластиковые окна')
+
+
