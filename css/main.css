@@ -625,7 +625,12 @@ ul:not([class]) li:before {
   z-index: 16;
 }
 
-.content h1 {
+.content > *:last-child {
+  margin-bottom: 0;
+}
+
+.content h1,
+h1 {
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 40px;
@@ -634,12 +639,14 @@ ul:not([class]) li:before {
   line-height: normal;
 }
 @media screen and (max-width: 992px) {
-  .content h1 {
+  .content h1,
+  h1 {
     font-size: 24px;
   }
 }
 
-.section-header, h2 {
+.section-header,
+h2 {
   margin-top: 0;
   margin-bottom: 35px;
   font-size: 34px;
@@ -647,7 +654,8 @@ ul:not([class]) li:before {
   line-height: normal;
 }
 @media screen and (max-width: 992px) {
-  .section-header, h2 {
+  .section-header,
+  h2 {
     font-size: 24px;
   }
 }
@@ -2280,27 +2288,43 @@ h3:not([class]) {
   transform: translateY(-2px);
 }
 
-.window-installment .container {
+.baner-03 .baner-03__inner {
   padding: 15px;
   background-color: #d7e4ec;
-  background-image: url("../img/window-installment/bg-pc.jpg");
+  background-image: url("../img/baner-03/bg-pc.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 3px;
 }
+@media screen and (max-width: 1320px) {
+  .baner-03 .baner-03__inner {
+    margin-left: -30px;
+    margin-right: -30px;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .baner-03 .baner-03__inner {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
 @media screen and (max-width: 768px) {
-  .window-installment .container {
-    background-image: url("../img/window-installment/bg-mob.jpg");
+  .baner-03 .baner-03__inner {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-image: url("../img/baner-03/bg-mob.jpg");
   }
 }
 @media screen and (max-width: 480px) {
-  .window-installment .btn {
+  .baner-03 .btn {
     min-width: initial;
   }
 }
 
-.window-installment__box {
+.baner-03__box {
   padding: 40px 46px;
+  min-height: 403px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(3px);
@@ -2310,30 +2334,39 @@ h3:not([class]) {
   align-items: flex-start;
   max-width: 500px;
 }
+@media screen and (max-width: 992px) {
+  .baner-03__box {
+    min-height: 273px;
+  }
+}
 @media screen and (max-width: 600px) {
-  .window-installment__box {
+  .baner-03__box {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-.window-installment__title {
+.baner-03__title {
   margin-bottom: 15px;
 }
 
-.window-installment__descr {
-  margin-bottom: 80px;
+.baner-03__descr {
   margin-top: 0;
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
-  .window-installment__descr {
+  .baner-03__descr {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 600px) {
-  .window-installment__descr {
+  .baner-03__descr {
     margin-bottom: 25px;
   }
+}
+
+.baner-03__btn {
+  margin-top: auto;
 }
 
 .advantages-v2__box {
@@ -3100,9 +3133,17 @@ h3:not([class]) {
 }
 
 .breadcrumbs {
+  margin-bottom: 40px;
   padding-top: 11px;
   padding-bottom: 11px;
   background-color: #f8f8f8;
+}
+@media screen and (max-width: 480px) {
+  .breadcrumbs {
+    margin-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 4px;
+  }
 }
 .breadcrumbs a {
   margin: 0 10px;
@@ -3200,6 +3241,175 @@ h3:not([class]) {
 }
 @media screen and (max-width: 768px) {
   .adv3-item__descr {
+    font-size: 16px;
+  }
+}
+
+.baner-02 {
+  position: relative;
+  padding: 22px;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 768px) {
+  .baner-02 {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0;
+  }
+}
+.baner-02 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .baner-02 img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+.baner-02 .box {
+  padding: 35px 30px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 404px;
+  color: #2e2d2e;
+}
+@media screen and (max-width: 768px) {
+  .baner-02 .box {
+    padding: 14px 15px 38px;
+    max-width: 100%;
+    background-color: #F5F5F5;
+  }
+}
+.baner-02 .price {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 43px;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (max-width: 480px) {
+  .baner-02 .price {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+}
+.baner-02 .text {
+  display: block;
+  margin-bottom: 4px;
+  color: #555;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+@media screen and (max-width: 480px) {
+  .baner-02 .text {
+    font-size: 15px;
+  }
+}
+.baner-02 .currency {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 35px;
+}
+@media screen and (max-width: 480px) {
+  .baner-02 .currency {
+    font-size: 18px;
+  }
+}
+.baner-02 .descr {
+  margin: 0 0 15px;
+  color: #2e2d2e;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+}
+@media screen and (max-width: 480px) {
+  .baner-02 .descr {
+    margin-bottom: 20px;
+  }
+}
+.baner-02 .adv {
+  margin: 0 0 26px;
+  display: flex;
+  gap: 40px;
+  color: var(--color-accent);
+}
+.baner-02 .adv-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+@media screen and (max-width: 480px) {
+  .baner-02 .adv-item {
+    font-size: 14px;
+  }
+}
+.baner-02 .adv-item span {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (max-width: 480px) {
+  .baner-02 .adv-item span {
+    font-size: 24px;
+  }
+}
+.baner-02 .form-box {
+  padding-top: 3px;
+  border-top: 1px solid #e0e0e0;
+}
+.baner-02 .form-box p {
+  color: #2e2d2e;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+@media screen and (max-width: 480px) {
+  .baner-02 .form-box p {
+    font-size: 16px;
+  }
+}
+.baner-02 .form input[type=tel], .baner-02 .form input[type=text] {
+  background-color: #F2F2F2;
+}
+.more-detailed {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 34px;
+}
+@media screen and (max-width: 480px) {
+  .more-detailed {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.more-detailed__link {
+  padding-bottom: 7px;
+  display: inline-flex;
+  color: var(--color-accent);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  border-bottom: 2px solid var(--color-accent);
+}
+@media screen and (max-width: 480px) {
+  .more-detailed__link {
     font-size: 16px;
   }
 }

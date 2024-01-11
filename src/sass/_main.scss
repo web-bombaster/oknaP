@@ -118,22 +118,30 @@ ul:not([class]) {
 }
 
 .content {
-	h1 {
-		margin-top: 0;
-		margin-bottom: 15px;
-
-		font-size: 40px;
-		font-style: normal;
-		font-weight: 600;
-		line-height: normal;
-
-		@media screen and (max-width: 992px) {
-			font-size: 24px;
+	& > * {
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
 
-.section-header, h2 {
+.content h1,
+h1 {
+	margin-top: 0;
+	margin-bottom: 15px;
+
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+
+	@media screen and (max-width: 992px) {
+		font-size: 24px;
+	}
+}
+
+.section-header,
+h2 {
 	margin-top: 0;
 	margin-bottom: 35px;
 
@@ -212,8 +220,6 @@ h3:not([class]) {
 		display: inline-block;
 	}
 }
-
-
 
 // Страница показа верстки
 .index {
