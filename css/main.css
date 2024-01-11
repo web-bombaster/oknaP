@@ -3124,6 +3124,86 @@ h3:not([class]) {
   padding-right: 10px;
 }
 
+.advantages-v3__box {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .advantages-v3__box {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .advantages-v3__box {
+    flex-direction: column;
+  }
+}
+
+.adv3-item {
+  padding: 49px 15px 47px;
+  width: calc(33.3333333333% - 13.3333333333px);
+  background: linear-gradient(264deg, #fef3e0 0%, #fae0ee 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-accent);
+}
+@media screen and (max-width: 768px) {
+  .adv3-item {
+    padding: 25px 15px;
+    width: calc(33.3333333333% - 6.6666666667px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .adv3-item {
+    width: 100%;
+  }
+}
+
+.adv3-item__icon {
+  display: block;
+  margin-bottom: 25px;
+  height: 47px;
+}
+@media screen and (max-width: 768px) {
+  .adv3-item__icon {
+    margin-bottom: 20px;
+  }
+}
+
+.adv3-item__title {
+  display: block;
+  margin-bottom: 25px;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 47px;
+}
+@media screen and (max-width: 768px) {
+  .adv3-item__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+}
+
+.adv3-item__descr {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (max-width: 992px) {
+  .adv3-item__descr {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .adv3-item__descr {
+    font-size: 16px;
+  }
+}
+
 /**
  * Swiper 11.0.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions
