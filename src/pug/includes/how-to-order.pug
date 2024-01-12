@@ -1,0 +1,35 @@
+mixin how-to-order__item(icon, title, descr)
+	.how-to-order__item.hto-item
+		img.hto-item__img(src="img/how-to-order/"+icon, alt="", loading="lazy")
+		p.hto-item__title #{title}
+		p.hto-item__descr #{descr}
+
+.how-to-order.indent
+	.container
+		h2.section-header Как заказать окна Rehau
+		.how-to-order__box
+			+how-to-order__item(
+				'01.svg',
+				'Заявка и рассчет стоимости с выездом замерщика',
+				'Оставьте заявку. Рассчитаем точную стоимость онлайн или направим замерщика'
+			)
+			+how-to-order__item(
+				'02.svg',
+				'Заключение договора и оплата удобным способом',
+				'Оформление онлайн, оплата любым способом, в том числе в рассрочку на 6 месяцев'
+			)
+			+how-to-order__item(
+				'03.svg',
+				'Изготовление, доставка и установка',
+				'Изготовление за 5 дней. Установим окна и откосы за 1 день. Вынесем весь мусор'
+			)
+			+how-to-order__item(
+				'04.svg',
+				'Гарантия и сервисное обслуживание',
+				'Предоставим гарантии и сервисное обслуживание'
+			)
+
+
+
+
+

@@ -63,6 +63,26 @@
 .baner-03__title {
 	margin-bottom: 15px;
 }
+.baner-03__title--v2 {
+	margin-top: 0;
+	color: var(--color-accent);
+
+	font-size: 40px;
+	font-weight: 600;
+	line-height: normal;
+
+	@media screen and (max-width: 768px) {
+		font-size: 24px;
+	}
+
+	span {
+		font-size: 80px;
+
+		@media screen and (max-width: 768px) {
+			font-size: 24px;
+		}
+	}
+}
 .baner-03__descr {
 	// margin-bottom: 80px;
 	margin-top: 0;
