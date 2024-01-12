@@ -1,0 +1,57 @@
+mixin options__item(img, title)
+	.options__item.options_item
+		span.options_item__title #{title}
+		img.options_item__img(src="img/options/"+img, alt="", loading="lazy")
+
+.options.indent
+	.container
+		h2.section-header Дополнительные опции и комплектующие:
+		.options__box
+			+options__item(
+				'01.png',
+				'Ламинирование',
+			)
+			+options__item(
+				'02.png',
+				'Нестандартная форма',
+			)
+			+options__item(
+				'03.png',
+				'Декоративная раскладка',
+			)
+			+options__item(
+				'04.png',
+				'Детские замки',
+			)
+			+options__item(
+				'05.png',
+				'Пластиковые подоконники',
+			)
+			+options__item(
+				'06.png',
+				'Жалюзи и шторы',
+			)
+			+options__item(
+				'07.png',
+				'Вентиляционный клапан',
+			)
+			+options__item(
+				'08.png',
+				'Стеклопакет',
+			)
+			+options__item(
+				'09.png',
+				'Москитные сетки',
+			)
+			+options__item(
+				'10.png',
+				'Противовзломные окна',
+			)
+			+options__item(
+				'11.png',
+				'Цветные ручки',
+			)
+			+options__item(
+				'12.png',
+				'Пластиковые откосы',
+			)

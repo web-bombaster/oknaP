@@ -1,0 +1,127 @@
+.baner-04 {
+	overflow: hidden;
+}
+.indent {
+}
+.container {
+}
+.baner-04__inner {
+	position: relative;
+
+	display: flex;
+	align-items: flex-end;
+
+	height: 450px;
+	background-image: url("../img/baner-04/bg.jpg");
+	background-size: cover;
+	background-position: center;
+
+	@include banerMargins;
+
+	@media screen and (max-width: 768px) {
+		height: 340px;
+	}
+
+	@media screen and (max-width: 480px) {
+		background-image: url("../img/baner-04/bg-mob.jpg");
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		width: 690px;
+		height: 100%;
+
+		background-image: url("../img/baner-04/decore-pc.svg");
+		background-size: cover;
+
+		@media screen and (max-width: 768px) {
+			background-image: url("../img/baner-04/decore-mob.svg");
+		}
+	}
+}
+.baner-04__box {
+	padding-left: 40px;
+	padding-bottom: 45px;
+
+	width: 330px;
+
+	color: #fff;
+	z-index: 2;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 20px;
+		padding-bottom: 20px;
+	}
+}
+.baner-04__title {
+	margin: 0 0 15px;
+	font-size: 37px;
+	font-weight: 700;
+	line-height: 1.1;
+	text-transform: uppercase;
+
+	@media screen and (max-width: 768px) {
+		font-size: 24px;
+		text-transform: initial;
+		width: 190px;
+	}
+}
+.baner-04__btn {
+	color: var(--color-accent);
+}
+.baner-04__sale {
+	position: absolute;
+	z-index: 3;
+	left: 384px;
+	top: 180px;
+	color: var(--color-accent);
+
+	display: flex;
+	flex-direction: column;
+
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.1;
+
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+
+		top: 80px;
+		left: 190px;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		left: 50%;
+		top: 50%;
+
+		width: 225px;
+		height: 225px;
+
+		transform: translate(-50%, -50%) rotate(45deg);
+
+		background-color: #fff7f4;
+
+		@media screen and (max-width: 768px) {
+			width: 126px;
+			height: 126px;
+
+			transform: translate(-50%, -50%) rotate(37deg);
+		}
+	}
+
+	span {
+		font-size: 75px;
+		margin-top: -10px;
+
+		@media screen and (max-width: 768px) {
+			font-size: 48px;
+		}
+	}
+}

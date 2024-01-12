@@ -6,7 +6,7 @@
 @import '_normalize';
 
 // Смартгрид и свои миксины
-// @import '_mixins/mixins'; // свои миксины
+@import '_mixins/mixins'; // свои миксины
 
 // Шрифты
 // @import "_fonts";
@@ -43,6 +43,8 @@
 @import "_baner-02";
 @import "_more-detailed-links";
 @import "_how-to-order";
+@import "_baner-04";
+@import "_options";
 
 
 
