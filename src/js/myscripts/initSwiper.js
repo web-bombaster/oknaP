@@ -19,7 +19,7 @@ function initSwiper() {
 				prevEl: ".our-works__prev",
 			},
 		});
-	};
+	}
 
 	if (document.querySelector(".pr-slider")) {
 		let menu = ["Blitz", "Grazio", "Delight", "Intelio"];
@@ -42,7 +42,7 @@ function initSwiper() {
 				},
 			},
 		});
-	};
+	}
 
 	// Окна Rehau по цене производителя - вложенный слайдер
 	if (document.querySelector(".slider-windows")) {
@@ -78,7 +78,7 @@ function initSwiper() {
 				prevEl: ".slider-windows__prev",
 			},
 		});
-	};
+	}
 
 	// Профильные системы Rehau
 	if (document.querySelector(".systems-rehau__slider")) {
@@ -114,7 +114,7 @@ function initSwiper() {
 				clickable: true,
 			},
 		});
-	};
+	}
 
 	// Окна Rehau по цене производителя - вложенный слайдер
 	if (document.querySelector(".customer-reviews__slider")) {
@@ -129,7 +129,7 @@ function initSwiper() {
 					slidesPerView: 2,
 					spaceBetween: 20,
 					loop: true,
-				}
+				},
 			},
 			pagination: {
 				el: ".customer-reviews__pagination",
@@ -140,8 +140,45 @@ function initSwiper() {
 				prevEl: ".customer-reviews__prev",
 			},
 		});
-	};
-};
+	}
+
+	// Наши сертификаты и гарантии
+	if (document.querySelector(".certificates-slider")) {
+		const certificatesSliderSlider = new Swiper(".certificates-slider", {
+			spaceBetween: 12,
+			slidesPerView: 2,
+			loop: true,
+			// disableOnInteraction: false,
+			// pauseOnMouseEnter: true,
+			breakpoints: {
+				500: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+					loop: true,
+				},
+				660: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+					loop: true,
+				},
+				920: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+					loop: true,
+				},
+			},
+			pagination: {
+				el: ".certificates-slider__pagination",
+				clickable: true,
+				dynamicBullets: true,
+			},
+			navigation: {
+				nextEl: ".certificates-slider__next",
+				prevEl: ".certificates-slider__prev",
+			},
+		});
+	}
+}
 
 // window.addEventListener("resize", initSwiper);
 window.addEventListener("resize", function () {

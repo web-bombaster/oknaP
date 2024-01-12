@@ -1,0 +1,23 @@
+mixin certificates__item(img, title)
+	a(href="#").certificates-slider__item.swiper-slide
+		img.certificates-slider__img(src="img/certificates/"+img, alt="", loading="lazy")
+
+
+.certificates.indent
+	.container
+		h2.section-header Наши сертификаты и гарантии
+		p Мы предоставляем гарантию на всю производимую продукцию от 5 лет. Качество изделий подтверждают соответствующие сертификаты и фирменная маркировка REHAU. Монтаж оконных систем нашими специалистами – гарантия безупречной эксплуатации изделий в течение десятилетий.
+
+		.certificates-slider__box
+			.certificates-slider.swiper
+				.certificates-slider__wrapper.swiper-wrapper
+					+certificates__item('01.jpg')
+					+certificates__item('02.jpg')
+					+certificates__item('03.jpg')
+					+certificates__item('04.jpg')
+					+certificates__item('05.jpg')
+					+certificates__item('06.jpg')
+
+				.certificates-slider__pagination
+			.certificates-slider__prev.swiper-button-prev
+			.certificates-slider__next.swiper-button-next
