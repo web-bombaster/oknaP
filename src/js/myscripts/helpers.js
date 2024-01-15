@@ -26,3 +26,4 @@ const tabsToggle = function (tabBtnClass, tabContentClass) {
 
 // tabsToggle(".footer-top__title", ".footer-menu");
 tabsToggle(".footer-top__title", ".footer-top__col");
+tabsToggle(".faq-item__title", ".questions-faq__item");

@@ -25,10 +25,15 @@
 		width: 100%;
 
 		font-family: "Inter", sans-serif;
+		font-size: 16px;
 
 		background-color: #fff;
 		border-radius: 3px;
 		border: 1px solid #bdbdbd;
+
+		@media screen and (max-width: 768px) {
+			font-size: 15px;
+		}
 	}
 
 	textarea {
@@ -36,6 +41,7 @@
 		padding: 13px 18px;
 
 		font-family: "Inter", sans-serif;
+		font-size: 16px;
 
 		width: 100%;
 		min-height: 130px;
@@ -44,6 +50,10 @@
 		border: 1px solid #bdbdbd;
 
 		resize: vertical;
+
+		@media screen and (max-width: 768px) {
+			font-size: 15px;
+		}
 	}
 
 	.agreement,
@@ -59,7 +69,22 @@
 		background-color: var(--color-accent);
 		text-align: center;
 		justify-content: center;
-		border: none;
+
+		&.btn {
+			border: none;
+		}
+	}
+
+	select {
+		padding: 13px 18px;
+		margin-bottom: 10px;
+
+		font-family: "Inter", sans-serif;
+		font-size: 16px;
+
+		@media screen and (max-width: 768px) {
+			font-size: 15px;
+		}
 	}
 }
 
