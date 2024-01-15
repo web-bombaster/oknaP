@@ -4022,6 +4022,106 @@ h3:not([class]) {
   }
 }
 
+.whypop-item {
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  background-color: #f5f7f8;
+}
+.whypop-item.swiper-slide {
+  display: flex;
+}
+@media screen and (max-width: 1320px) {
+  .whypop-item {
+    gap: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .whypop-item {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .whypop-item {
+    padding: 0;
+    gap: 0;
+  }
+}
+
+.whypop-item__img {
+  display: block;
+  width: 565px;
+  height: auto;
+}
+@media screen and (max-width: 992px) {
+  .whypop-item__img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .whypop-item__img {
+    max-width: 430px;
+    width: 100%;
+  }
+}
+
+.whypop-item__box {
+  max-width: 430px;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .whypop-item__box {
+    padding: 25px 20px;
+  }
+}
+
+.whypop-item__title {
+  margin: 0 0 25px;
+  color: #2e2d2e;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+@media screen and (max-width: 992px) {
+  .whypop-item__title {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
+
+.whypop-item__descr {
+  margin: 0 0 25px;
+  color: #4f4f4f;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+@media screen and (max-width: 992px) {
+  .whypop-item__descr {
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+}
+
+.whypop-item__number {
+  color: var(--color-accent);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+@media screen and (max-width: 992px) {
+  .whypop-item__number {
+    font-size: 15px;
+  }
+}
+
+.why-popular__pagination {
+  text-align: center;
+}
+
 /**
  * Swiper 11.0.5
  * Most modern mobile touch slider and framework with hardware accelerated transitions

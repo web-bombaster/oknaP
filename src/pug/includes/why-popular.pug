@@ -1,0 +1,36 @@
+mixin whypop-item(img, title, descr, number)
+	.why-popular__item.whypop-item.swiper-slide
+		img.whypop-item__img(src="img/why-popular/"+img, alt="", loading="lazy")
+		.whypop-item__box
+			p.whypop-item__title #{title}
+			p.whypop-item__descr #{descr}
+			span.whypop-item__number #{number}
+
+
+.why-popular.indent
+	.container
+		h2.section-header Почему окна Рехау такие популярные
+		.why-popular__slider.swiper
+			.why-popular__wrapper.swiper-wrapper
+				+whypop-item(
+					'01.jpg',
+					'Повышенный показатель теплоизоляции',
+					'За счет инновационной конструкции и использования оригинального камерного уплотнителя RAUCELL способность сохранять тепло увеличена до 6 раз по сравнению со старыми деревянными окнами',
+					'01'
+				)
+				+whypop-item(
+					'01.jpg',
+					'2Повышенный показатель теплоизоляции',
+					'За счет инновационной конструкции и использования оригинального камерного уплотнителя RAUCELL способность сохранять тепло увеличена до 6 раз по сравнению со старыми деревянными окнами',
+					'02'
+				)
+				+whypop-item(
+					'01.jpg',
+					'3Повышенный показатель теплоизоляции',
+					'За счет инновационной конструкции и использования оригинального камерного уплотнителя RAUCELL способность сохранять тепло увеличена до 6 раз по сравнению со старыми деревянными окнами',
+					'03'
+				)
+
+			.why-popular__pagination
+			.why-popular__next.swiper-button-next
+			.why-popular__prev.swiper-button-prev
