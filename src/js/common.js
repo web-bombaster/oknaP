@@ -13,6 +13,7 @@ document.addEventListener(
 		// include './myscripts/customer-reviews.js'
 		// include './myscripts/initSwiper.js'
 		// include './myscripts/helpers.js'
+		// include './myscripts/compare-profile.js'
 		// -include './myscripts/blazy-init.js'
 	}
 );
