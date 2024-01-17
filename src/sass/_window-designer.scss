@@ -1,18 +1,54 @@
 .window-designer {
 	.left {
-        width: calc(60% - 40px);
+		width: calc(55% - 40px);
 
-        @media screen and (max-width: 992pxpx) {
-        width: calc(50% - 20px);
+		@media screen and (max-width: 992pxpx) {
+			width: calc(50% - 20px);
+		}
 
-        }
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			max-width: 600px;
+		}
 	}
 	.info {
+		position: relative;
 		margin-bottom: 100px;
+
+		@media screen and (max-width: 992px) {
+			margin-bottom: 60px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 117px;
+			left: 255px;
+
+			width: 71px;
+			height: 98px;
+
+			background-image: url("../img/window-designer/arrow.svg");
+			background-size: cover;
+
+			@media screen and (max-width: 992px) {
+				top: 90px;
+				width: 51px;
+				height: 70px;
+			}
+
+			@media screen and (max-width: 768px) {
+				top: 89%;
+			}
+		}
 	}
 	.info-title {
 		margin-bottom: 20px;
 		max-width: 412px;
+
+		@media screen and (max-width: 768px) {
+			max-width: initial;
+		}
 	}
 	.section-header {
 	}
@@ -23,30 +59,69 @@
 			font-size: 16px;
 		}
 	}
-	.lamination {
+	.lamination,
+	.handles {
 		display: flex;
-        flex-wrap: wrap;
+		flex-wrap: wrap;
 		gap: 8px;
 	}
-	.lamination-item {
+	.lamination-item,
+	.handles-item {
 		display: flex;
-        flex-wrap: wrap;
+		flex-wrap: wrap;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-        gap: 8px;
+		gap: 8px;
 
 		color: #2e2d2e;
 		font-size: 13px;
 		font-weight: 400;
 		line-height: normal;
 
-        width: 65px;
+		width: 65px;
+		// word-break: break-all;
+
+		cursor: pointer;
+
 	}
-	.lamination-item__view {
-        width: 65px;
-        height: 65px;
-        background-color: #fff;
+	.handles-item {
+		background-size: 80px 80px;
+	}
+	.lamination-item__view,
+	.handles-item__view {
+		width: 65px;
+		height: 65px;
+		background-color: #fff;
+
+		background-size: cover;
+		background-position: center;
+
+
+		box-shadow: 0px 0px 0px 0px var(--color-accent);
+		transition: box-shadow .5s;
+
+		&:hover {
+			box-shadow: 0px 0px 0px 2px var(--color-accent);
+		}
+
+
+		@media screen and (max-width: 400px) {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 1 / 1;
+		}
+
+		&.toggle {
+			box-shadow: 0px 0px 0px 2px var(--color-accent);
+			opacity: .9;
+		}
+	}
+	.handles-item__view {
+		background-position: 11px -14px;
+		background-size: 64px;
+		background-repeat: no-repeat;
+		border-radius: 50%;
 	}
 	.handles {
 	}
@@ -55,26 +130,56 @@
 	.handles-item__view {
 	}
 	.right {
-		width: 40%;
+		width: 45%;
 
-        @media screen and (max-width: 992px) {
-            width: 50%;
-        }
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			max-width: 600px;
+		}
 	}
 	.laminator {
+		position: relative;
 		width: 100%;
 		aspect-ratio: 540 / 590;
+
+		display: flex;
+		justify-content: center;
+
+		background-image: url("../img/window-designer/bg.jpg");
+		background-size: cover;
+		background-position: center;
 		background-color: #fff;
 	}
 	.laminator-texture {
+		display: inline-flex;
+
+		img {
+			margin: 0 auto;
+			display: block;
+			height: 100%;
+			width: auto;
+		}
 	}
 	.laminator-fg {
 	}
 	.laminator-handle {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		width: 19%;
+		height: 38%;
+
+		transform: translate(-50%, -50%);
+
+		background-size: cover;
+		background-position: center;
 	}
 	.laminator-handle__01 {
+		left: 40%;
 	}
 	.laminator-handle__02 {
+		left: 63%;
 	}
 }
 
@@ -86,9 +191,15 @@
 	justify-content: space-between;
 	gap: 40px;
 
-    @media screen and (max-width: 992px) {
-        gap: 20px;
-    }
+	@media screen and (max-width: 992px) {
+		gap: 20px;
+	}
+
+	@media screen and (max-width: 768px) {
+		padding: 16px;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
 }
 .window-designer__tabs {
 }
@@ -102,6 +213,11 @@
 	gap: 38px;
 
 	border-bottom: 1px solid #bdbdbd;
+	cursor: pointer;
+
+	@media screen and (max-width: 480px) {
+		gap: 20px;
+	}
 }
 .windes-tabs__btn {
 	position: relative;
@@ -112,9 +228,13 @@
 	font-weight: 400;
 	line-height: normal;
 
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+	}
+
 	&.toggle {
 		color: var(--color-accent);
-		font-size: 18px;
+		// font-size: 18px;
 		font-weight: 700;
 		line-height: normal;
 
