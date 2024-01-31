@@ -1026,6 +1026,12 @@ h3:not([class]) {
        column-rule: 1px solid #a80055;
   right: 0;
 }
+@media screen and (max-width: 1024px) {
+  .nav-menu > .nav-menu__item:last-child .nav-menu__submenu {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
 .mobile-menu .nav-menu {
   flex-direction: column;
   gap: 0;
@@ -1041,11 +1047,10 @@ h3:not([class]) {
 .nav-menu__item {
   position: relative;
 }
-.nav-menu__item:hover .nav-menu__submenu {
-  display: block;
-}
-.mobile-menu .nav-menu__item:hover .nav-menu__submenu {
-  display: none;
+@media (hover: hover) {
+  .nav-menu__item:hover .nav-menu__submenu {
+    display: block;
+  }
 }
 
 .nav-menu__link {
@@ -1074,6 +1079,19 @@ h3:not([class]) {
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+.nav-menu__submenu.toggle {
+  display: block;
+}
+@media screen and (max-width: 1024px) {
+  .nav-menu__submenu {
+    display: none;
+    margin-top: 0;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    position: relative;
+  }
+}
 .nav-menu__submenu > .nav-menu__item a {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1097,13 +1115,20 @@ h3:not([class]) {
   padding-right: 0;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px dotted #e67068;
+  border-bottom: 1px dotted #f5f5f5;
 }
 .mobile-menu .active .nav-menu__submenu {
   display: flex;
   flex-direction: column;
   width: calc(100% - 30px);
   box-shadow: none;
+}
+
+.nav-menu__link--open-panel.toggle {
+  background-color: #f5f5f5;
+}
+.mobile-menu .nav-menu__link--open-panel.toggle::before {
+  transform: translateY(-50%) rotate(0deg);
 }
 
 .banner-fw {

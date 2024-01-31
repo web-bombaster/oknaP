@@ -7,7 +7,8 @@ const tabsToggle = function (tabBtnClass, tabContentClass) {
 		// Перебираем кнопки табов, по которым можем щелкнуть
 		tabsBtn.forEach(function (btn, index) {
 			// Вешаем событие клика на каждую кнопку
-			btn.addEventListener("click", function () {
+			btn.addEventListener("click", function (e) {
+				e.preventDefault();
 				if (btn.classList.contains("toggle")) {
 					tabsBtn[index].classList.remove("toggle");
 					tabsContent[index].classList.remove("toggle");
@@ -25,6 +26,7 @@ const tabsToggle = function (tabBtnClass, tabContentClass) {
 // tabsToggle(".footer-top__title", ".footer-menu");
 tabsToggle(".footer-top__title", ".footer-top__col");
 tabsToggle(".faq-item__title", ".questions-faq__item");
+tabsToggle(".nav-menu__link--open-panel", ".nav-menu__submenu");
 
 // Табы. Параметры: класс для кнопок табов и класс содержимого табов
 const tabsToggle2 = function (tabBtnClass, tabContentClass) {
