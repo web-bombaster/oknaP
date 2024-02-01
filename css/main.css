@@ -1086,7 +1086,7 @@ h3:not([class]) {
   .nav-menu__submenu {
     display: none;
     margin-top: 0;
-    padding: 0;
+    padding: 0 0 0 10px;
     box-shadow: none;
     width: 100%;
     position: relative;
@@ -2986,6 +2986,10 @@ h3:not([class]) {
 .mobile-menu .btn {
   margin-top: 20px;
 }
+.mobile-menu .nav-menu > .nav-menu__item .nav-menu__link {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .mobile-menu .nav-menu__item:hover a {
   box-shadow: none;
 }
@@ -3054,6 +3058,11 @@ h3:not([class]) {
   gap: 24px;
   flex-grow: 1;
   height: auto;
+}
+@media screen and (max-width: 1024px) {
+  .mobile-menu__box {
+    padding: 35px 0px;
+  }
 }
 
 .jsMobileMenuBtnToggle {

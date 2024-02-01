@@ -51,7 +51,15 @@
 		margin-top: 20px;
 	}
 
+	.nav-menu {
+		& > .nav-menu__item .nav-menu__link {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
 	.nav-menu__item {
+
 		&:hover {
 			a {
 				box-shadow: none;
@@ -155,6 +163,10 @@
 	height: auto;
 	// height: 100%;
 	// overflow-y: auto;
+
+	@media screen and (max-width: 1024px) {
+		padding: 35px 0px;
+	}
 }
 
 .jsMobileMenuBtnToggle {
