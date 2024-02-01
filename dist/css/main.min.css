@@ -1508,7 +1508,7 @@ h3:not([class])
 {
     position: relative;
 }
-@media (hover: hover)
+@media (min-width: 1025px)
 {
     .nav-menu__item:hover .nav-menu__submenu
     {

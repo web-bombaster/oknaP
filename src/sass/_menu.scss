@@ -57,15 +57,14 @@
 .nav-menu__item {
 	position: relative;
 
-	@media (hover: hover) {
+	@media (min-width: 1025px) {
 		&:hover {
 			.nav-menu__submenu {
 				display: block;
-
+	
 			}
 		}
 	}
-
 }
 .nav-menu__link {
 	padding-bottom: 20px;
