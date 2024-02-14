@@ -13,7 +13,7 @@
 include ../includes/mixins
 
 //- Для pageType указать тип страницы
-- var pageType = 'home';
+- var pageType = 'calculator';
 
 
 //- home - главная страница
@@ -23,6 +23,10 @@ if pageType === 'home'
 //- plastikovye-okna - для показа верстки
 if pageType === 'plastikovyeOkna'
 	include plastikovye-okna
+
+//- calculator - для показа верстки
+if pageType === 'calculator'
+	include calculator
 
 //- index - для показа верстки
 if pageType === 'index'

@@ -1,0 +1,76 @@
+.container.indent
+	.calculator
+		.calculator-grid
+			.calculator-grid__item.one
+				p.calculator-title 1. Выберите количество секций окна
+				.tab-btns
+					.tab-btns__item
+						img(src="img/calculator/1_1.png", alt="")
+						span.pc Односекционное
+						span.mob 1 секция
+					.tab-btns__item
+						img(src="img/calculator/2_2.png", alt="")
+						span.pc 2-х секционное
+						span.mob 2 секции
+					.tab-btns__item
+						img(src="img/calculator/3_4.png", alt="")
+						span.pc 3-х секционное
+						span.mob 3 секции
+					.tab-btns__item
+						img(src="img/calculator/5_2.png", alt="")
+						span.pc 4-х секционное
+						span.mob 4 секции
+					.tab-btns__item
+						img(src="img/calculator/4_4.png", alt="")
+						span.pc Двери
+						span.mob Двери
+				p.tab-btns__info
+					img(src="img/calculator/hand.svg", alt="")
+					| Наведите на окно и выберите тип створки
+
+			.calculator-grid__item.two
+				p.calculator-title 2. Укажите размеры окна
+				.two-wrapper
+					.calculator__input-box
+						label
+							| Ширина
+							span (мм):
+						input(type="text" name="" placeholder="750")
+					.calculator__input-box
+						label
+							| Высота
+							span (мм):
+						input(type="text" name="" placeholder="2100")
+				.calculator__preview
+					img(src="img/calculator/3_12.png", alt="")
+
+			.calculator-grid__item.three
+				p.calculator-title 3. Задайте дополнительные характеристики
+
+
+			.calculator-grid__item.four
+				p Цена окна:
+				.calculator-price__box
+					span.calculator__price 34.191
+					span.calculator__currency ₽
+				p Дополнительные опции:
+				ul
+					li
+						b Ламинация:
+						span 3764 ₽
+					li
+						b Подоконник:
+						span 0 ₽
+					li
+						b Отлив:
+						span 0 ₽
+					li
+						b Монтаж:
+						span 0 ₽
+					li
+						b Отделка:
+						span 5.663 ₽ (с учетом материалов)
+				.calculator__btn-box
+					a.calculator__btn(href="#").btn Заказать окно
+					a(href="#").calculator__question Есть вопросы?
+
