@@ -24,6 +24,10 @@
 			gap: 5px;
 		}
 
+		// @media (hover: none) {
+		// 	pointer-events: none;
+		// }
+
 		.tab-btns__box {
 			position: relative;
 			z-index: 2;
@@ -217,6 +221,10 @@
 
 			@media screen and (max-width: 380px) {
 				width: 70px;
+			}
+
+			&:focus {
+				background-color: red;
 			}
 		}
 
@@ -612,8 +620,12 @@
 }
 
 .tab-btns__item:hover .type-submenu-inner {
-	// display: flex;
-	// padding: 12px;
+	@media (hover: hover) {
+		opacity: 1;
+		height: auto;
+	}
+}
+.tab-btns__item.active .type-submenu-inner {
 	opacity: 1;
 	height: auto;
 }

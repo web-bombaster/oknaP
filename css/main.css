@@ -4800,6 +4800,9 @@ h3:not([class]) {
     width: 70px;
   }
 }
+.calculator-grid__item.two input:focus {
+  background-color: red;
+}
 .calculator-grid__item.two .two-wrapper {
   margin-bottom: 34px;
   display: flex;
@@ -5172,7 +5175,14 @@ h3:not([class]) {
   background-color: var(--color-accent);
 }
 
-.tab-btns__item:hover .type-submenu-inner {
+@media (hover: hover) {
+  .tab-btns__item:hover .type-submenu-inner {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+.tab-btns__item.active .type-submenu-inner {
   opacity: 1;
   height: auto;
 }
