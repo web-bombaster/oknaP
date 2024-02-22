@@ -11,6 +11,7 @@ document.addEventListener(
 		// include './myscripts/initSwiper.js'
 		// include './myscripts/helpers.js'
 		// include './myscripts/compare-profile.js'
+		// include './myscripts/calculator.js'
 		// -include './myscripts/burger.js'
 		// -include './myscripts/form.js'
 		// -include './myscripts/accordeon.js'
