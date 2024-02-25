@@ -1,0 +1,70 @@
+.noUi-target {
+    border: none;
+}
+
+.two .noUi-handle {
+    border: 5px solid var(--color-accent);
+    width: 20px;
+    height: 20px;
+
+    &::before {
+        display: none;
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
+.noUi-connects {
+    background-color: #C8CCCE;
+}
+
+.range-slider-01 {
+    height: 4px;
+    width: calc(100% - 30px);
+
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 0;
+}
+
+
+.range-slider-01 .noUi-connect,
+.range-slider-02 .noUi-connect {
+    background: var(--color-accent);
+}
+
+.range-slider-01 .noUi-handle
+ {
+    height: 18px;
+    width: 18px;
+    top: -7px;
+    right: -9px; /* half the width */
+    border-radius: 9px;
+    cursor: pointer;
+}
+.range-slider-02 {
+    width: 4px;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: calc(100% - 14px);
+
+    // transform: rotate(180deg);
+}
+
+.range-slider-02 .noUi-handle {
+    height: 18px;
+    width: 18px;
+    top: -5px;
+    // right: -9px; /* half the width */
+    left: -11px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.noUi-vertical .noUi-origin {
+    top: 0;
+}

@@ -9,7 +9,7 @@ let selectToggle = function () {
 		btnsSelect.forEach(function (btn, index) {
 			btn.addEventListener("click", function () {
 				let btnPosition = index;
-				console.log("btnPosition - " + btnPosition);
+				// console.log("btnPosition - " + btnPosition);
 
 				btnsSelect.forEach(function (btn, index) {
 					if (btn != btn[btnPosition]) {
@@ -94,45 +94,145 @@ selectVariant();
 // Только для мобильных! По щелчку на тип створки пробуем делать клик на стороннем элементе, чтобы убрать ховер с кнопки и закрыть выпадашку
 
 let closeTypeSubmenuInner = function () {
+	// Только для мобильных! По клику на .tab-btns__box даем родителю класс active чтобы открыть подменю с типами створок. При вовторном клике по тому же .tab-btns__box - закрываем подменю.
+	if (
+		/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+			navigator.userAgent
+		)
+	) {
+		let typeSubmenuItem = document.querySelectorAll(".type-submenu__item");
+		let tabBtnsBox = document.querySelectorAll(".tab-btns__box");
 
+		if (tabBtnsBox.length > 0) {
+			tabBtnsBox.forEach(function (element, index) {
+				element.addEventListener("click", function (e) {
+					e.preventDefault;
 
+					let btnPos = index; // запоминаем позицию кнопки, на которой щелкнули
 
-    // Только для мобильных! По клику на .tab-btns__box даем родителю класс active чтобы открыть подменю с типами створок. При вовторном клике по тому же .tab-btns__box - закрываем подменю.
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-        let typeSubmenuItem = document.querySelectorAll(".type-submenu__item");
-        let tabBtnsBox = document.querySelectorAll(".tab-btns__box");
+					tabBtnsBox.forEach(function (element) {
+						if (element != tabBtnsBox[btnPos]) {
+							element.parentElement.classList.remove("active");
+						} else {
+							element.parentElement.classList.toggle("active");
+						}
+					});
+				});
+			});
+		}
 
-        if (tabBtnsBox.length > 0) {
-            tabBtnsBox.forEach(function(element, index) {
-                element.addEventListener("click", function(e) {
-                    e.preventDefault;
-                    let btnPos = index;
+		// При клике на .type-submenu__item изменяем картинку пивью и закрываем подменю с типами створок
+		if (typeSubmenuItem.length > 0) {
+			typeSubmenuItem.forEach(function (element) {
+				element.addEventListener("click", function () {
+					// Действия по смене картинки
+					let imgPatch = element
+						.querySelector(".type-submenu__img")
+						.getAttribute("src");
+					document
+						.querySelector(".calculator__preview img")
+						.setAttribute("src", imgPatch);
 
-                    tabBtnsBox.forEach(function(element) {
-                        if (element != tabBtnsBox[btnPos]) {
-                            element.parentElement.classList.remove('active');
-                        } else {
-                            element.parentElement.classList.toggle('active');
-                        };
-                    });
-                });
-            });
-        };
+					element
+						.closest(".tab-btns__item")
+						.classList.remove("active");
 
-        // При клике на .type-submenu__item изменяем картинку пивью и закрываем подменю с типами створок
-        if (typeSubmenuItem.length > 0) {
-            typeSubmenuItem.forEach(function (element) {
-                element.addEventListener("click", function () {
-                    // Действия по смене картинки
-                    let imgPatch = element.querySelector('.type-submenu__img').getAttribute('src');
-                    document.querySelector('.calculator__preview img').setAttribute('src', imgPatch);
-
-                    element.closest('.tab-btns__item').classList.remove('active');
-                });
-            });
-        };
-
-    };
+					// let minWidth = this.getAttribute("data-min-width");
+					// let maxWidth = this.getAttribute("data-max-width");
+					// let minHeight = this.getAttribute("data-min-height");
+					// let maxHeight = this.getAttribute("data-max-height");
+				});
+			});
+		}
+	}
 };
 
 closeTypeSubmenuInner();
+
+// Инициализация nouislider при загрузке страницы
+let nouisliderInit = function (
+	rangeClass,
+	rangeInputClass,
+	orientRangeSlider,
+	directionRangeSlider,
+	minValue,
+	maxValue
+) {
+	let range = document.querySelector(rangeClass);
+	let rangeInput = document.querySelector(rangeInputClass);
+
+	if (!range || !rangeInput) return;
+
+	const inputs = [rangeInput];
+
+	noUiSlider.create(range, {
+		start: 0,
+		direction: directionRangeSlider,
+		orientation: orientRangeSlider,
+		// connect: true,
+		connect: "lower",
+		range: {
+			min: minValue,
+			max: maxValue,
+		},
+		step: 1,
+	});
+
+	range.noUiSlider.set(Math.round((minValue + maxValue) / 2));
+
+	// при изменений положения элемента управления изменяем значение инпута
+	range.noUiSlider.on("update", function (values, handle) {
+		inputs[handle].value = parseInt(values[handle]);
+	});
+
+	// при изменении значения в input - меняем положение соответствующего элемента управления
+	rangeInput.addEventListener("change", function () {
+		range.noUiSlider.set([this.value, null]);
+	});
+};
+
+// Инициализируем первый вызов с нужными значениями для первого выбранного элемента
+nouisliderInit(".range-slider-01", ".value-width", "horizontal", "ltr", 300, 1000);
+nouisliderInit(".range-slider-02", ".value-height", "vertical", "rtl", 1000, 1700);
+
+// Для обновления минимального и максимального значений для nouislider, установка стартового значения
+let nouisliderUpdate = function (rangeClass, minValue, maxValue) {
+	let range = document.querySelector(rangeClass);
+	range.noUiSlider.updateOptions({
+        range: {
+            'min': minValue,
+            'max': maxValue
+        }
+    });
+	range.noUiSlider.set(Math.round((minValue + maxValue) / 2));
+};
+
+// При клике на .type-submenu__item из дата атрибутов получаем значения мин и макс для nouislider-ов, меняем стартовое значение ползунка
+let getMinMaxInputValueAttribute = function () {
+	let typeSubmenuItem = document.querySelectorAll(".type-submenu__item");
+
+	if (typeSubmenuItem.length > 0) {
+		typeSubmenuItem.forEach(function (element) {
+			element.addEventListener("click", function () {
+				let minWidth = +this.getAttribute("data-min-width");
+				let maxWidth = +this.getAttribute("data-max-width");
+				let minHeight = +this.getAttribute("data-min-height");
+				let maxHeight = +this.getAttribute("data-max-height");
+
+				nouisliderUpdate(
+					".range-slider-01",
+					minWidth,
+					maxWidth
+				);
+
+				nouisliderUpdate(
+					".range-slider-02",
+					minHeight,
+					maxHeight
+				);
+			});
+		});
+	}
+};
+
+getMinMaxInputValueAttribute();

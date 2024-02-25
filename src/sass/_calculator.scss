@@ -223,9 +223,9 @@
 				width: 70px;
 			}
 
-			&:focus {
-				background-color: red;
-			}
+			// &:focus {
+			// 	background-color: red;
+			// }
 		}
 
 		.two-wrapper {
@@ -249,13 +249,22 @@
 			gap: 7px;
 		}
 		.calculator__preview {
-			display: flex;
+			position: relative;
+			display: inline-flex;
 			justify-content: center;
+			align-self: center;
+
+			padding-right: 30px;
+
 			img {
 				height: 268px;
 				max-width: 100%;
 				object-fit: contain;
 			}
+		}
+
+		.range-slider-01 {
+
 		}
 	}
 	&.three {

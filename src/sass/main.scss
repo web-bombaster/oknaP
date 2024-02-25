@@ -55,5 +55,7 @@
 @import "_calculator";
 
 // Библиотеки и их кастомизация
-@import "../libs/swiper-bundle.min";
+@import "../libs/_swiper-bundle.min";
+@import "../libs/_nouislider";
+@import "_custom-nouislider";
 @import "_custom-swiper";

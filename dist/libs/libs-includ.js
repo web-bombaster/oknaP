@@ -1,4 +1,5 @@
 // include './../libs/swiper-bundle.min.js'
+// include './../libs/nouislider.js'
 // include './../libs/inputmask.min.js'
 // -include './../libs/blazy.min.js'
 // -include './../libs/dynamic_adapt.js'
