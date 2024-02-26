@@ -4752,6 +4752,7 @@ h3:not([class]) {
   .calculator-grid__item.two {
     grid-column: 1/2;
     grid-row: 2/3;
+    padding-bottom: 105px;
   }
 }
 .calculator-grid__item.two label {
@@ -4826,12 +4827,17 @@ h3:not([class]) {
   justify-content: center;
   align-self: center;
   padding-right: 30px;
+  text-align: center;
 }
 .calculator-grid__item.two .calculator__preview img {
   height: 268px;
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.calculator-grid__item.two .calculator__preview-title {
+  position: absolute;
+  top: calc(100% + 50px);
 }
 .calculator-grid__item.three {
   grid-column: 1/3;

@@ -173,6 +173,9 @@
 		@media screen and (max-width: 768px) {
 			grid-column: 1 / 2;
 			grid-row: 2 / 3;
+
+
+			padding-bottom: 105px;
 		}
 
 		label {
@@ -255,12 +258,18 @@
 			align-self: center;
 
 			padding-right: 30px;
+			text-align: center;
 
 			img {
 				height: 268px;
 				max-width: 100%;
 				object-fit: contain;
 			}
+		}
+
+		.calculator__preview-title {
+			position: absolute;
+			top: calc(100% + 50px);
 		}
 
 		.range-slider-01 {
