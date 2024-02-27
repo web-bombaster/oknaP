@@ -169,13 +169,13 @@
 	&.two {
 		grid-column: 1 / 2;
 		grid-row: 2 / 3;
+		padding-bottom: 135px;
 
 		@media screen and (max-width: 768px) {
 			grid-column: 1 / 2;
 			grid-row: 2 / 3;
 
-
-			padding-bottom: 105px;
+			// padding-bottom: 105px;
 		}
 
 		label {
@@ -257,23 +257,139 @@
 			justify-content: center;
 			align-self: center;
 
-			padding-right: 30px;
+			padding-right: 60px;
+			// padding-bottom: 20px;
 			text-align: center;
 
 			img {
 				height: 268px;
 				max-width: 100%;
 				object-fit: contain;
+
+				// @media screen and (max-width: 480px) {
+				// 	width: 100%;
+				// 	height: auto;
+				// }
 			}
 		}
 
 		.calculator__preview-title {
 			position: absolute;
-			top: calc(100% + 50px);
+			top: calc(100% + 80px);
 		}
 
-		.range-slider-01 {
+		.arrow-width {
+			position: absolute;
+			left: 0;
+			top: 100%;
+			height: 32px;
+			width: calc(100% - 60px);
+			border-left: 1px solid #bdbdbd;
+			border-right: 1px solid #bdbdbd;
 
+			&::before {
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+
+				content: "Ширина";
+
+				font-weight: 400;
+				font-size: 14px;
+
+				line-height: 1.35;
+				text-align: center;
+				color: #b4b4b4;
+			}
+		}
+		.arrow-width__box {
+			position: absolute;
+			bottom: 14px;
+			width: 100%;
+			left: 0;
+			height: 1px;
+			background-color: #4f4f4f;
+
+			&::before {
+				position: absolute;
+				top: -5px;
+				right: 0;
+				content: "";
+				width: 10px;
+				height: 10px;
+				transform: rotate(135deg);
+				border-left: 1px solid #4f4f4f;
+				border-top: 1px solid #4f4f4f;
+			}
+
+			&::after {
+				position: absolute;
+				top: -5px;
+				left: 0px;
+				content: "";
+				width: 10px;
+				height: 10px;
+				transform: rotate(135deg);
+				border-right: 1px solid #4f4f4f;
+				border-bottom: 1px solid #4f4f4f;
+			}
+		}
+		.arrow-height {
+			position: absolute;
+			right: 30px;
+			height: 100%;
+			width: 32px;
+			border-top: 1px solid #bdbdbd;
+			border-bottom: 1px solid #bdbdbd;
+
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 4px;
+				transform: rotate(-90deg);
+
+				content: "Высота";
+
+				font-weight: 400;
+				font-size: 14px;
+
+				line-height: 1.35;
+				text-align: center;
+				color: #b4b4b4;
+			}
+		}
+		.arrow-height__box {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			right: 14px;
+			width: 1px;
+			background-color: #4f4f4f;
+
+			&::before {
+				position: absolute;
+				top: 2px;
+				left: -4px;
+				content: "";
+				width: 10px;
+				height: 10px;
+				transform: rotate(45deg);
+				border-left: 1px solid #4f4f4f;
+				border-top: 1px solid #4f4f4f;
+			}
+
+			&::after {
+				position: absolute;
+				bottom: 2px;
+				left: -4px;
+				content: "";
+				width: 10px;
+				height: 10px;
+				transform: rotate(45deg);
+				border-right: 1px solid #4f4f4f;
+				border-bottom: 1px solid #4f4f4f;
+			}
 		}
 	}
 	&.three {
