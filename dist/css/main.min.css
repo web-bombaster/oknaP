@@ -49,8 +49,6 @@
 
     -webkit-transition: opacity 2s linear;
 
-    -o-transition: opacity 2s linear;
-
     transition: opacity 2s linear;
 
     opacity: 1;
@@ -61,8 +59,6 @@
     visibility: hidden;
 
     -webkit-transition: visibility 0s 2s, opacity 2s linear;
-
-    -o-transition: visibility 0s 2s, opacity 2s linear;
 
     transition: visibility 0s 2s, opacity 2s linear;
 
@@ -568,7 +564,6 @@ template
     cursor: pointer;
     -webkit-transition: background-color .25s, color .25s, -webkit-transform .25s;
     transition: background-color .25s, color .25s, -webkit-transform .25s;
-    -o-transition: background-color .25s, color .25s, transform .25s;
     transition: background-color .25s, color .25s, transform .25s;
     transition: background-color .25s, color .25s, transform .25s, -webkit-transform .25s;
     text-align: center;
@@ -631,7 +626,6 @@ template
 
     cursor: pointer;
     -webkit-transition: .25s;
-    -o-transition: .25s;
     transition: .25s;
 
     color: #fff;
@@ -983,8 +977,6 @@ h3:not([class])
 
     -webkit-transition: .25s;
 
-    -o-transition: .25s;
-
     transition: .25s;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -1003,7 +995,6 @@ h3:not([class])
 
     content: '';
     -webkit-transition: .25s;
-    -o-transition: .25s;
     transition: .25s;
 
     background-color: var(--color-white);
@@ -1100,8 +1091,6 @@ h3:not([class])
 
     -webkit-transition: color .25s;
 
-    -o-transition: color .25s;
-
     transition: color .25s;
 }
 @media screen and (max-width: 1200px)
@@ -1166,8 +1155,6 @@ h3:not([class])
     padding-left: 15px;
 
     -webkit-transition: color .25s;
-
-    -o-transition: color .25s;
 
     transition: color .25s;
 
@@ -1452,7 +1439,6 @@ h3:not([class])
 {
     -webkit-transition: -webkit-box-shadow .25s;
     transition: -webkit-box-shadow .25s;
-    -o-transition: box-shadow .25s;
     transition: box-shadow .25s;
     transition: box-shadow .25s, -webkit-box-shadow .25s;
 }
@@ -1592,8 +1578,6 @@ h3:not([class])
 
     -webkit-transition: background-color .25s;
 
-    -o-transition: background-color .25s;
-
     transition: background-color .25s;
 }
 .nav-menu__submenu .nav-menu__link:hover
@@ -1714,8 +1698,6 @@ h3:not([class])
 
     content: '';
 
-    background: -o-linear-gradient(6deg, #f5f7f8 31.58%, rgba(255, 255, 255, 0) 63.09%);
-
     background: linear-gradient(84deg, #f5f7f8 31.58%, rgba(255, 255, 255, 0) 63.09%);
 
     inset: 0;
@@ -1725,7 +1707,6 @@ h3:not([class])
     .banner-bg::before
     {
         background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba(255, 255, 255, .9)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, .9)));
-        background: -o-linear-gradient(bottom, rgba(255, 255, 255, .9) 0, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, .9) 100%);
         background: linear-gradient(0deg, rgba(255, 255, 255, .9) 0, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, .9) 100%);
     }
 }
@@ -2759,8 +2740,6 @@ h3:not([class])
     -webkit-transition: -webkit-box-shadow .25s;
 
     transition: -webkit-box-shadow .25s;
-
-    -o-transition: box-shadow .25s;
 
     transition: box-shadow .25s;
 
@@ -4286,8 +4265,6 @@ h3:not([class])
 
     -webkit-transition: gap .25s;
 
-    -o-transition: gap .25s;
-
     transition: gap .25s;
 
     gap: 11px;
@@ -4402,8 +4379,6 @@ h3:not([class])
     -webkit-transition: color .25s, -webkit-transform .25s;
 
     transition: color .25s, -webkit-transform .25s;
-
-    -o-transition: color .25s, transform .25s;
 
     transition: color .25s, transform .25s;
 
@@ -4544,8 +4519,6 @@ h3:not([class])
 
     -webkit-transition: left .25s;
 
-    -o-transition: left .25s;
-
     transition: left .25s;
 
     background-color: #fff;
@@ -4670,8 +4643,6 @@ h3:not([class])
     right: -100%;
 
     -webkit-transition: right .5s;
-
-    -o-transition: right .5s;
 
     transition: right .5s;
 }
@@ -5042,8 +5013,6 @@ h3:not([class])
 
     -webkit-transition: color .25s, border-bottom .25s;
 
-    -o-transition: color .25s, border-bottom .25s;
-
     transition: color .25s, border-bottom .25s;
     text-decoration: none;
 
@@ -5141,7 +5110,6 @@ h3:not([class])
     text-align: center;
 
     color: var(--color-accent);
-    background: -o-linear-gradient(186deg, #fef3e0 0%, #fae0ee 100%);
     background: linear-gradient(264deg, #fef3e0 0%, #fae0ee 100%);
 
     -webkit-box-align: center;
@@ -6108,7 +6076,6 @@ h3:not([class])
 
     content: '';
     -webkit-transition: .25s transform;
-    -o-transition: .25s transform;
     transition: .25s transform;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -6430,8 +6397,6 @@ h3:not([class])
     -webkit-transition: -webkit-transform .25s;
 
     transition: -webkit-transform .25s;
-
-    -o-transition: transform .25s;
 
     transition: transform .25s;
 
@@ -6872,8 +6837,6 @@ h3:not([class])
 
     transition: -webkit-box-shadow .5s;
 
-    -o-transition: box-shadow .5s;
-
     transition: box-shadow .5s;
 
     transition: box-shadow .5s, -webkit-box-shadow .5s;
@@ -7180,7 +7143,6 @@ h3:not([class])
 
     cursor: pointer;
     -webkit-transition: border .25s;
-    -o-transition: border .25s;
     transition: border .25s;
 
     border: 2px solid #e5e9eb;
@@ -7905,8 +7867,6 @@ h3:not([class])
 
     -webkit-transition: opacity .5s ease-out;
 
-    -o-transition: opacity .5s ease-out;
-
     transition: opacity .5s ease-out;
 
     opacity: 0;
@@ -7964,7 +7924,6 @@ h3:not([class])
 
     cursor: pointer;
     -webkit-transition: border .25s;
-    -o-transition: border .25s;
     transition: border .25s;
     text-align: center;
 
@@ -8276,7 +8235,6 @@ h3:not([class])
 
     cursor: pointer;
     -webkit-transition: .25s;
-    -o-transition: .25s;
     transition: .25s;
 
     border: 1px solid #e0e0e0;
@@ -8324,8 +8282,6 @@ h3:not([class])
     -webkit-transition: -webkit-transform .25s;
 
     transition: -webkit-transform .25s;
-
-    -o-transition: transform .25s;
 
     transition: transform .25s;
 
@@ -8480,12 +8436,9 @@ h3:not([class])
 
     -webkit-transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
 
-    -o-transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
-
     transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
     -webkit-transition-property: -webkit-transform;
     transition-property: -webkit-transform;
-    -o-transition-property: transform;
     transition-property: transform;
     transition-property: transform, -webkit-transform;
 }
@@ -8523,8 +8476,6 @@ h3:not([class])
 
     transition-property: -webkit-transform;
 
-    -o-transition-property: transform;
-
     transition-property: transform;
 
     transition-property: transform, -webkit-transform;
@@ -8549,7 +8500,6 @@ h3:not([class])
 {
     -webkit-transition-property: height, -webkit-transform;
     transition-property: height, -webkit-transform;
-    -o-transition-property: transform, height;
     transition-property: transform, height;
     transition-property: transform, height, -webkit-transform;
 
@@ -8704,28 +8654,24 @@ h3:not([class])
 .swiper-3d .swiper-slide-shadow-left
 {
     background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, 0)));
-    background-image: -o-linear-gradient(right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
     background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right
 {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, 0)));
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
     background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top
 {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, 0)));
-    background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
     background-image: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-bottom
 {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, 0)));
-    background-image: -o-linear-gradient(top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
 }
 
@@ -8971,8 +8917,6 @@ h3:not([class])
 
     -webkit-transition: .3s opacity;
 
-    -o-transition: .3s opacity;
-
     transition: .3s opacity;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -9145,8 +9089,6 @@ button.swiper-pagination-bullet
 
     -webkit-transition: .2s transform, .2s top;
 
-    -o-transition: .2s transform, .2s top;
-
     transition: .2s transform, .2s top;
 }
 
@@ -9173,14 +9115,12 @@ button.swiper-pagination-bullet
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet
 {
     -webkit-transition: .2s transform, .2s left;
-    -o-transition: .2s transform, .2s left;
     transition: .2s transform, .2s left;
 }
 
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet
 {
     -webkit-transition: .2s transform, .2s right;
-    -o-transition: .2s transform, .2s right;
     transition: .2s transform, .2s right;
 }
 
@@ -9380,8 +9320,6 @@ button.swiper-pagination-bullet
 
     -webkit-transition-timing-function: ease-out;
 
-    -o-transition-timing-function: ease-out;
-
     transition-timing-function: ease-out;
 }
 
@@ -9406,14 +9344,12 @@ button.swiper-pagination-bullet
 .swiper-fade.swiper-free-mode .swiper-slide
 {
     -webkit-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
 
 .swiper-fade .swiper-slide
 {
     -webkit-transition-property: opacity;
-    -o-transition-property: opacity;
     transition-property: opacity;
     pointer-events: none;
 }
@@ -9578,8 +9514,6 @@ button.swiper-pagination-bullet
 
     transition-property: opacity, height, -webkit-transform;
 
-    -o-transition-property: transform, opacity, height;
-
     transition-property: transform, opacity, height;
 
     transition-property: transform, opacity, height, -webkit-transform;
@@ -9715,7 +9649,6 @@ button.swiper-pagination-bullet
     -webkit-transition: transform .3s;
             -webkit-transition: -webkit-transform .3s;
             transition: -webkit-transform .3s;
-            -o-transition: transform .3s;
             transition: transform .3s;
             transition: transform .3s, -webkit-transform .3s;
 }
