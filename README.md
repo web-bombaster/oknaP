@@ -1,3 +1,3 @@
 # oknaP
 
-Посмотреть верстку [https://web-bombaster.github.io/oknaP/dist/glavnaya.html](https://web-bombaster.github.io/oknaP/dist/)
+Посмотреть верстку [https://web-bombaster.github.io/oknaP/dist/](https://web-bombaster.github.io/oknaP/dist/)
